@@ -58,8 +58,8 @@ $(function() {
         $( ".gramercy" ).click(function() {
           $( ".gramercy-open" ).slideIn( "slow" );
         });
-        $( ".96street" ).click(function() {
-          $( ".96-street-open" ).slideIn( "slow" );
+        $( ".ninty-six-street" ).click(function() {
+          $( ".ninty-six-street-open" ).slideIn( "slow" );
         });
 
      // Country onClick to Open Grid
