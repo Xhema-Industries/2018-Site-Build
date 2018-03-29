@@ -1,0 +1,79 @@
+---
+# Main SASS manifest
+---
+// Greyscale
+$grey:          #999;
+$grey-dark:     #333;
+$grey-light:    #ccc;
+$grey-lighter:  #efefef;
+$grey-lightest: #f9f9f9;
+$grey-header:   #eee;
+
+$color-white:   white;
+$color-off-white: #fff6e9;
+
+// Theme colors
+$color-Darkgreen: #51b848;
+$color-black:     #000000;
+$color-bright-green: #a0c62b;
+$color-green:     #22bbaf;
+$color-grey:      #454545;
+$color-blue:      #3a4555;
+$color-light-blue: #3790bf;
+$color-blue-rgba: rgba($color-blue, 0.9);
+$color-gold:      #f8961d;
+$color-red:       #e82529;
+$color-orange:    #f8961d;
+
+$bootstrap-green: #5cb85c;
+$bootstrap-warning: #ec971f;
+
+// Social colors
+$twitter:    #00aced;
+$facebook:   #3b5998;
+$googleplus: #dd4b39;
+$pinterest:  #cb2027;
+$linkedin:   #007bb6;
+$youtube:    #bb0000;
+$vimeo:      #aad450;
+$instagram:  #517fa4;
+
+// Fonts
+$font--family--sans: 'Open sans', sans-serif;
+$font--family--serif: 'Vollkorn', serif;
+
+// Breakpoints
+$tablet-width: 768px;
+$large-tablet-width: 961px;
+$desktop-width: 1024px;
+$mobile-width: 767px;
+$large-width: 1645px;
+
+/// Load SASS files
+@charset "utf-8";
+
+// Load mixins manifest
+@import "mixins/mixins";
+@import "mixins/extends";
+@import "mixins/slanted";
+@import "mixins/bootstrap-mods";
+
+//Load layout
+@import "layout";
+@import "navigation";
+@import "hero-banner";
+@import "headers";
+@import "inline-images";
+@import "footer";
+@import "logos";
+@import "blog";
+@import "forms";
+@import "tables";
+@import "modals";
+@import "post-card";
+@import "video";
+@import "modals";
+@import "tabs";
+@import "callout";
+@import "about";
+@import "carousel";

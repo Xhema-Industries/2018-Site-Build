@@ -1,0 +1,259 @@
+#tab-desktop {
+  display: block;
+  @include mobile {
+    display: none;
+  }
+}
+#tab-mobile {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+  a.btn {
+    @include mobile {
+      color: $color-white !important;
+    }
+    vertical-align: middle;
+    display: inline-block;
+    width: 100%;
+    span {
+      width: 50%;
+      display: inline-block;
+      margin: 0 auto;
+      svg {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+          .pdfL3 { @include mobile { fill:#22bbaf !important; } }
+          .pdfL4 { @include mobile { fill:#333 !important; } }
+      }
+    }
+  }
+  #watch {
+    .arrow {
+      position: relative;
+      display: inline-block;
+      color: $color-orange;
+      height: 40px;
+      top: -50px;
+      left: 50%;
+      font-size: 4em;
+    }
+  }
+  #learn {
+    .arrow {
+      position: relative;
+      display: inline-block;
+      color: $color-green;
+      height: 40px;
+      top: -50px;
+      left: 50%;
+      font-size: 4em;
+    }
+      li {
+        a {
+          @include mobile {
+            color: $grey !important;
+            font-weight: bold;
+            position: relative;
+            top: -1em;
+            span {
+              @include mobile {
+                position: relative;
+                top: 2em;
+              }
+            }
+          }
+        }
+      }
+  }
+  #faq {
+    .arrow {
+      position: relative;
+      display: inline-block;
+      color: $grey-light;
+      height: 40px;
+      top: -50px;
+      left: 50%;
+      font-size: 4em;
+    }
+      a {
+        @include mobile {
+          color: $color-green !important;
+        }
+      }
+  }
+}
+
+ul#tabs {
+  li {
+    float: left;
+    display: inline-block;
+    a {
+      color: $color-white;
+      vertical-align: middle;
+      display: inline-block;
+      width: 100%;
+
+      img { width: 60%; }
+
+      h2 {
+        font-size: 1.6em;
+        display: inline-block;
+        float: left;
+        font-weight: 600;
+        margin: 0 -50px;
+        text-align: left;
+        width: 40%;
+        padding: 1.6em 0 0;
+
+        span.bttn {
+          font-size: .6em;
+          display: block;
+          float: left;
+          font-weight: 100;
+          margin: 0 auto;
+          text-align: left;
+          width: 100%;
+        }
+      }
+      span.icon {
+        width: 50%;
+        display: inline-block;
+        margin: 0 auto;
+        svg {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          path {
+            fill: $color-white;
+          }
+        }
+      }
+
+    }
+  }
+  li.watch {
+    background: $color-orange;
+  }
+  li.learn {
+    background: $color-green;
+  }
+  li.faq {
+    background: $grey-light;
+  }
+}
+#watch{
+    @include mobile {
+      background: white;
+    }
+  .container-fluid {
+    padding: 0em 4em;
+  }
+  h2 {
+    border-left: 4px solid $color-orange;
+    padding: 0 10px;
+    width: auto;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+    color: $grey;
+    height: 40px;
+    margin: 0 0 2em 0;
+  }
+  .arrow {
+    position: relative;
+    display: inline-block;
+    color: $color-orange;
+    height: 40px;
+    top: -50px;
+    left: 8%;
+    font-size: 4em;
+  }
+  .fa-play-circle { }
+}
+#learn{
+  @include mobile {
+    background: white;
+  }
+  h2 {
+    border-left: 4px solid $color-green;
+    padding: 0 10px;
+    width: auto;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+    color: $grey;
+    height: 40px;
+    margin: 0 0 2em 0;
+  }
+  .arrow {
+    position: relative;
+    display: inline-block;
+    color: $color-green;
+    height: 40px;
+    top: -50px;
+    left: 48%;
+    font-size: 4em;
+  }
+  li {
+    a {
+      color: $grey;
+      font-weight: bold;
+      position: relative;
+      top: -5em;
+      &:hover { color: $color-green; text-decoration: none; }
+    }
+    span.description {
+      position: relative;
+      top: -6em;
+      @include mobile {
+        top: -1em;
+      }
+      font-size: .8em;
+    }
+  }
+  span.icon {
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    top: 2em;
+    &:hover {
+      svg {
+        -webkit-animation: tada infinite 2s;
+        animation: tada infinite 2s;
+      }
+    }
+    svg {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+#faq{
+  @include mobile {
+    background: white;
+  }
+  h2 {
+    border-left: 4px solid $grey-light;
+    padding: 0 10px;
+    width: auto;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+    color: $grey;
+    height: 40px;
+    margin: 0 0 2em 0;
+  }
+  .arrow {
+    position: relative;
+    display: inline-block;
+    color: $grey-light;
+    height: 40px;
+    top: -50px;
+    left: 88%;
+    font-size: 4em;
+  }
+}

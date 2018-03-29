@@ -1,0 +1,218 @@
+/// Main style sheet for ASG site
+// main template elements
+body {
+  background: $color-off-white;
+  font-family: $font--family--sans;
+  font-size: 18px;
+  overflow-x: hidden;
+  & * {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+  h1 {font-size: 2em; color: $color-white;}
+  h3 {font-size: 1.3em;}
+
+  h1,
+  h3,
+  h4 {
+    font-family: $font--family--serif;
+    font-weight: 300;
+  }
+
+  ul, ul li { list-style: none !important; }
+
+  h2 {
+    font-family: $font--family--serif;
+    font-weight: 300;
+  }
+  h1,
+  h2,
+  h3 {line-height: 1.1;}
+  strong {font-weight: 600;}
+
+  .text-orange { color: $color-orange; }
+
+  .container-fluid {
+    padding: 0;
+  }
+  :placeholder-shown {
+    font-weight: lighter;
+  }
+  .text-center {
+      color: $grey-light;
+      text-align: center;
+  }
+  .divider {
+    color: $grey-light;
+    margin: 1em auto;
+  }
+  hr {
+    &.half-rule {
+      border: 0;
+      border-top: 1px solid $grey-light;
+      width: 50%;
+      @include opacity(0.4, 4);
+    }
+    &.light {
+      background: $color-blue;
+      height: 1px;
+      margin: 20px auto;
+      width: 65%;
+      @include opacity(0.2, 2);
+    }
+  }
+}
+
+.text-grey-light {
+  color: $grey-light;
+  margin-bottom: 1em;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+#post-body {
+  h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: $grey;
+
+  }
+  h4.gold {
+    font-family: $font--family--serif;
+    font-weight: 300;
+    font-size: 85%;
+    text-transform: uppercase;
+    color: $color-orange;
+    border-bottom: 1px solid $grey-light;
+    padding: 0 0 .2em 0;
+    margin: 1em 0 1.5em 0;
+    width: auto;
+      &.norule {
+        border-bottom: 0px solid $grey-light;
+        padding: 0 0 .2em 0;
+      }
+  }
+}
+
+section {
+  &#xhema,
+  &#portfolio,
+  &#about,
+  &#capabilities,
+  &#press
+  &#post-body,
+  &#contact {
+    @include noslant(0, $color-off-white);
+    margin-bottom: 0;
+    padding: 1em 0;
+  }
+  &#contact {
+    background: $color-grey;
+    color: $color-white;
+    padding: 3em 0;
+    h1, h2, h3, h4, h5, h6 { color: $color-white; }
+    h1 {
+      border-bottom: 4px solid $color-orange;
+      padding: 0.3em 0;
+      width: auto;
+      display: inline-block;
+    }
+    text-align: center;
+    .logo { display: none; }
+
+    .form {
+      @include desktop {
+        padding: 0em 3em 0em;
+        margin: 0em 6em 3em;
+        z-index: 999;
+      }
+      &:active,
+      &:focus {
+        text-decoration: none;
+      }
+      @include tablet {
+        width: 100%;
+        z-index: 999;
+      }
+      @include mobile {
+        width: 100%;
+        z-index: 999;
+      }
+      h2 {
+        display: none;
+      }
+      input{
+        width: 100%;
+        margin: 4px 0;
+        background: $color-white;
+        border: 1px solid $grey-light;
+        padding: 10px;
+        color: $grey;
+        font-size: .7em;
+        font-weight: 600;
+        &:focus {
+          color: $grey;
+        }
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: $grey;
+        }
+        &::-moz-placeholder { /* Firefox 19+ */
+          color: $grey;
+        }
+        &:-ms-input-placeholder { /* IE 10+ */
+          color: $grey;
+        }
+        &:-moz-placeholder { /* Firefox 18- */
+          color: $grey;
+        }
+      }
+      .btn {
+        background: $color-orange;
+        color: $color-white;
+        cursor: pointer;
+        border: none;
+        &:hover {
+          @include transition(all, .3s);
+          background: darken($color-orange, 10%);
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+#xhema {
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.category-body .container {
+    margin-top: 4em !important;
+}
+
+section {
+   // bring container above the 'slant'
+   .container {
+     position: relative;
+     z-index: 2;
+   }
+ }
+
+.formErrorMessages {
+  display: block;
+}
+
+input[type=submit] {
+  background: $color-orange;
+  color: $color-white;
+  float: right;
+  padding: .5em 1em;
+  &:hover {
+    background: darken($color-orange, 15%);
+  }
+}

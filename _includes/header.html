@@ -1,0 +1,31 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+
+    <div class="container">
+
+      <div class="navbar-header flex-row">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="{{ site.url }}">
+          <img src="/images/svg/xhema-white.svg" />
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <!-- {% unless page.index %}
+              <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            {% endunless %} -->
+              <li class="nav-item first"><a class="nav-link" href="{{ "/#about" | prepend: site.baseurl }}">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ "/#portfolio" | prepend: site.baseurl }}">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ "/#capabilities" | prepend: site.baseurl }}">Capabilities</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ "/#contact" | prepend: site.baseurl }}">Contact</a></li>
+              <li class="nav-item last"><a class="nav-link" href="{{ "/#press" | prepend: site.baseurl }}">Press</a></li>
+              <li class="nav-item share"><div class="addthis_inline_share_toolbox"></div></li>
+            </ul>
+      </div>
+
+    </div> <!-- /.container -->
+  </nav> <!--</div>--> <!-- /.navbar -->
+</header>

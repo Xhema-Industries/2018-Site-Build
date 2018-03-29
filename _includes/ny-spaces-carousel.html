@@ -1,0 +1,27 @@
+<div id="NYSpaces" class="carousel mr-auto ml-auto slide" data-ride="carousel">
+  <div class="carousel-inner text-center mb-0" role="listbox">
+    {% assign slides2 = (site.posts | sort: 'order') %}
+    {% for post in slides2 %}
+      {% if post.categories contains 'new-york-spaces-slide' %}
+
+        <div id="ny-spaces" class="carousel-item container-fluid"}>
+          {{ post.content }}
+        </div>
+
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div id="controls">
+
+    <div class="cover-image"><img src="/images/posts/press/ny-spaces/press-ny-spaces-cover.jpg" /></div>
+
+    <a class="carousel-control-prev" href="#NYSpaces" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#NYSpaces" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>

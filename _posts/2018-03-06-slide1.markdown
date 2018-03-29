@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Xhema Industries, INC."
+categories: homepage
+image: slide1.jpg
+tag: hero
+order: 1
+video:
+---
+# BUILDING BEYOND COMPRIMISE
+## The Most Meticulously - Crafted Homes and Townhouses in the Northeast.

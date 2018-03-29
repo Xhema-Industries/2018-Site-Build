@@ -1,0 +1,17 @@
+.table {
+  border: none;
+  margin: 0 auto;
+  text-align: center;
+  tr {
+    border: none;
+    td {
+      border: none;
+      img {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        padding: 3em;
+      }
+    }
+  }
+}
