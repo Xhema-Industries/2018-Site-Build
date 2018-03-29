@@ -4,7 +4,7 @@
     {% assign slides = (site.posts | sort: 'order') %}
     {% for post in slides %}
       {% if post.tag contains 'hero' %}
-        <div id="xhema" class="carousel-item container-fluid" {% if post.image %} style="background: url(/images/posts/{{ post.image }}) no-repeat 50% -180px fixed; background-size: cover;" {% endif %}>
+        <div id="xhema" class="carousel-item container-fluid" {% if post.image %} style="background: url({{ site.baseurl }}/images/posts/{{ post.image }}) no-repeat 50% -180px fixed; background-size: cover;" {% endif %}>
           <div id="banner-color-overlay"></div>
           <div class="row align-items-center position-absolute">
             <div class="banner-text col-md-12">
