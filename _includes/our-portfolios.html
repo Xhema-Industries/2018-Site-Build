@@ -1,0 +1,10 @@
+{% for post in site.posts %}
+{% if post.tags contains 'our-portfolios' %}
+<article>
+  <div class="row card-row position-relative">
+    <div data-aos="fade-right" data-aos-offset="300" class="col-md-6 portfolio-item">{% include portfolio-city.html %}</div>
+    <div data-aos="fade-left" data-aos-offset="350" class="col-md-6 portfolio-item">{% include portfolio-country.html %}</div>
+  </div>
+</article>
+{% endif %}
+{% endfor %}

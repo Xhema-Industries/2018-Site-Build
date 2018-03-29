@@ -1,0 +1,19 @@
+<div class="row card-row">
+  <div class="col-md-12 cardcontent text-left">
+    <h2>Capabilities</h2>
+  </div>
+</div>
+
+{% for post in site.posts %}
+{% if post.categories contains 'capabilities' %}
+<article>
+  <div class="row card-row">
+    <div class="col-md-12 cardcontent capabilities text-left">
+      <p>
+        {{ post.content }}
+      </p>
+    </div>
+  </div>
+</article>
+{% endif %}
+{% endfor %}

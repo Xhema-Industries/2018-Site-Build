@@ -1,0 +1,53 @@
+permalink: /:title
+
+# Site authors
+# append to list whenever an author is added
+author:
+  - name: Brent Hackman
+# ------------------------------------------------------
+# Site wide - Do not alter unless you know what you're doing
+# ------------------------------------------------------
+title: Xhema Industries
+# Change email to '$xhema_email' when ready to go live
+email: brenthack35@gmail.com
+description: Building Beyond Comprimise
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "/" # the base hostname & protocol for your site, e.g. http://example.com
+logo:
+github_username:  xhema-indsutries
+
+# SASS
+sass:
+  style: compressed
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules/
+  - npm-debug.log
+  - getruby.cmd
+  - jekyll-run.cmd
+
+# Xhema
+xhema: Xhema Industries
+xhema_short: xhema
+xhema_url: https://xhema.com
+xhema_ct_address: Oak and Division Street West - P.O. Box 4422, Greenwich, Connecticut 06831
+xhema_ct_phone: 203.531.6070
+xhema_ct_fax: 203.531.1089
+xhema_nyc_address: 150 East 58th Street - Architects & Designers Building, New York, New York 10155
+xhema_nyc_phone: 212.752.0270
+xhema_nyc_fax: 212.31 7.1477
+xhema_ny_address: 34 Locust Avenue - P.O. Box 623, Rye, New York 10580
+xhema_ny_phone: 914.967.4571
+xhema_email: contact@xhema.com
+xhema_copyright: xhema Industries, INC. All rights reserved.
+
+# Social - xhema social accounts
+social_links:
+  - service: fa far fa-envelope
+    url: mailto:contact@xhema.com

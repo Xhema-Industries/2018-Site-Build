@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+  {% include submit-modals.html %}
+  <body>
+    {% include header.html %}
+    {% include home-banner.html %}
+
+    <section id="about">
+      <div class="container" data-aos="fade-down" data-aos-offset="300">
+
+        {% include about.html %}
+
+      </div><!-- /.container -->
+    </section><!-- /#about -->
+
+    <section id="portfolio">
+      <div class="container-fluid">
+
+        {% include our-portfolios.html %}
+
+      </div><!-- /.container -->
+    </section><!-- /#portfolio -->
+
+    <section id="capabilities">
+      <div class="container" data-aos="fade-down" data-aos-offset="300">
+
+        {% include capabilities.html %}
+
+      </div><!-- /.container -->
+    </section><!-- /#capabilities -->
+
+    <section id="photos">
+      <div class="container-fluid col-lg-12">
+        <ul>
+          <li class="col-lg-3"><img class="first" src="/images/posts/gramercy/Gramercy-002.jpg" alt="Study"></li>
+          <li class="col-lg-3"><img class="second" src="/images/posts/96th-street-townhouse/96th-026.jpg" alt="Hallway"></li>
+          <li class="col-lg-3"><img class="third" src="images/posts/jones/jones-C-1.jpg" alt="Staircase"></li>
+          <li class="col-lg-3"><img class="fourth" src="images/posts/30-john-street/john-street-1336.jpg" alt="Pool"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="press">
+      <div class="container-fluid" data-aos="fade-down" data-aos-offset="300">
+
+        {% include press.html %}
+
+      </div><!-- /.container -->
+    </section><!-- /#press -->
+
+    <section id="contact">
+      <div class="container" data-aos="fade-down" data-aos-offset="300">
+
+          {% include contact.html %}
+
+      </div><!-- /.container -->
+    </section><!-- /#contact -->
+
+    {% include footer.html %}
+    {% include script.html %}
+    {% include addthis.html %}
+
+  </body>
+
+</html>

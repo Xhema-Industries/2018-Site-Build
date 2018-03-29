@@ -1,0 +1,248 @@
+#portfolio,
+#press,
+#about,
+#capabilities,
+#photos {
+  background: $color-off-white;
+  h1, h2, h3, h4, h5, h6 { color: $grey-dark; }
+  h3 { margin: 1em 0 .2em; font-weight: 600; font-size: 1.2em; }
+  hr.orange {
+    background: $color-orange;
+    width: 20%;
+    margin: .5em 0;
+    text-align: left;
+  }
+}
+#press,
+#about,
+#capabilities,
+#photos {
+  h2 {
+    display: inline-block;
+    border-bottom: 2px solid $color-orange;
+  }
+}
+#capabilities {
+  h1 { background: none; }
+  h3 {
+    margin: -30px 0px .2em;
+    color: $grey-dark;
+    font-weight: bold;
+    padding: 0 0 10px 0;
+  }
+  text-align: center;
+}
+#portfolio,
+#press,
+#about,
+#capabilities,
+#contact,
+#photos {
+  h1 {
+    border-bottom: 4px solid $color-orange;
+    padding: 0.3em 0;
+    width: auto;
+    display: inline-block;
+  }
+}
+
+#photos {
+  overflow: hidden;
+  height: 350px;
+  width: 100%;
+  border: none;
+  .container-fluid {
+    ul {
+      padding: 0;
+      margin: 0;
+      border: none;
+      li {
+        display: inline-block;
+        padding: 0;
+        margin: 0 -2px 0 -2px;
+        border: none;
+        img {
+          width: 100%;
+          height: auto;
+          max-width: 100%;
+          border: none;
+        }
+      }
+    }
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.card {
+  &-row {
+    padding: 1em 0 0em 0;
+    &:hover {
+      @include transition(all, 0.3s);
+      a:hover{
+        color: $color-green !important;
+        @include transition(all, 0.3s);
+      }
+    }
+
+    h2 {
+      color: $grey-dark;
+      @include transition(all, 0.3s);
+      font-size: 2em !important;
+    }
+
+    .reg-button {
+      @include transition(all, 0.3s);
+      background: darken($color-green, 0);
+      text-transform: uppercase;
+      text-decoration: none;
+      margin: 0 auto 1em;
+      text-decoration: none;
+      border: none;
+      display: inline-block;
+      padding: .6em;
+      @include border-radius(.3rem);
+      a { color: $color-white; }
+      &:hover {
+        background-color: darken($color-green, 10%);
+        color: $color-white !important;
+        text-decoration: none;
+        border: none !important;
+          a {
+            text-decoration: none;
+            border: none !important;
+          }
+      }
+    }
+
+    img {
+      @include transition(all, 0.3s);
+      // max-height: 100%;
+    }
+    img {
+      display: inline-block;
+      position: relative;
+    }
+
+    .portfolio-item {
+      padding: 0;
+
+      .city,
+      .country {
+        width: 100%;
+        height: 425px;
+        overflow: hidden;
+        position: relative;
+        padding: 0;
+        cursor: pointer;
+
+        &:hover {
+          img {
+            transform: scale(1.2);
+          }
+        }
+
+        hr {
+          border:none;
+          background: $color-orange;
+          height: 2px;
+          width: 15%;
+          position: relative;
+          display: block;
+          margin: 0 auto;
+          padding: 0;
+        }
+
+        img { width: 100%; height: auto; }
+
+        h3 {
+          position: absolute;
+          top: 40%;
+          color: #FFF !important;
+          font-weight: 600 !important;
+          text-transform: uppercase;
+          width: 100%;
+          text-align: center;
+          font-size: 1.3em !important;
+        }
+        p {
+          position: absolute;
+          top: 58%;
+          z-index: 999;
+          color: #FFF !important;
+          margin: 0 auto;
+          text-align: center;
+          width: 100%;
+          font-size: 1em;
+        }
+
+      }
+      .city {
+        img {
+            position: relative;
+            top: -80px;
+        }
+      }
+    }
+
+    .thumbs {
+       color: transparent;
+       display: inline-block;
+       @include bg-size(cover);
+       position: relative;
+       z-index: 1;
+       overflow: hidden;
+       width:100%;
+       max-height: 264px;
+       &:after {
+         content:" ";
+         background-color: rgba($color-blue, 0.2);
+         position: absolute;
+         left: 0;
+         right: 0;
+         top: 0;
+         bottom: 0;
+         z-index: 1;
+      }
+      img.img-fluid { width: 100%; }
+    }
+    a.post-title {
+      background:none;
+      &:before{
+        background:none;
+      }
+    }
+    .btn {
+      border-bottom: 3px solid $bootstrap-warning;
+      @include transition(all, 0.3s);
+    }
+
+    a:focus.post-title,
+    a:hover.post-title {
+      text-decoration: none;
+      background: none !important;
+    }
+  }
+  &-author {
+    color: $grey-dark;
+    display: block;
+    margin-bottom: 1em;
+    a {
+      border-bottom: 1px solid transparent;
+      color: $color-green;
+      text-decoration: none;
+      @include transition(all, 0.3s);
+      &:hover {
+        border-color: $color-green;
+      }
+    }
+  }
+}
+.post-tag{
+      font-family: $font--family--sans;
+      font-weight: 300;
+      text-transform: uppercase;
+      color:$color-orange;
+      padding-right: 6px;
+}

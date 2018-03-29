@@ -1,0 +1,59 @@
+.press-header {
+  width: 100%;
+  .cardcontent {
+    background: rgba(0,0,0,0.8);
+    color: $color-white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 2em 2em;
+    h1, h2, h3, h4, h5, h6, p, a {
+      color: $color-white !important;
+    }
+    h2 {
+      float: left;
+      display: inline-block;
+      padding: 0;
+      margin: .5em 0 0 2em;
+      text-align: center;
+    }
+    p {
+      float: right;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+#controls {
+  .carousel-control-prev {
+    left: 56% !important;
+  }
+  .carousel-control-next {
+    right: 0 !important;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    span {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .cover-image {
+    display: inline-block;
+    position: absolute;
+    top: 36%;
+    right: 15%;
+    width: 200px;
+    height: auto;
+    box-shadow: 5px 5px rgba(0,0,0,0.5);
+    -ms-transform: rotate(20deg); /* IE 9 */
+    -webkit-transform: rotate(20deg); /* Safari 3-8 */
+    transform: rotate(20deg);
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}

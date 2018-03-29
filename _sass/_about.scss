@@ -1,0 +1,55 @@
+.about {
+  .round {
+      margin: 0 auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 100%;
+      overflow: hidden;
+        img {
+          max-width: 100%;
+          width: 100%;
+          height: auto;
+          @include mobile {
+            width: 100%;
+          }
+        }
+  }
+  h2 {
+    color: $grey;
+    font-size: 1em !important;
+    font-weight: 600;
+    margin: 2em 0 1em;
+    span { color: $grey !important; font-weight: lighter; }
+    span.rating {
+      display: inline-block;
+      margin: 0.3em 0em 0 .2em;
+      text-align: center;
+      color: yellow;
+      font-size: 1em !important;
+    }
+  }
+  p {
+    font-weight: normal;
+    color: $grey;
+  }
+  a {
+
+  }
+}
+.carousel-indicators {
+  bottom: 0 !important;
+  li {
+    background-color: $color-white;
+    border: 1px solid $color-grey;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
+  li.active {
+    background-color: $color-white;
+    border: 1px solid $color-green;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
+}

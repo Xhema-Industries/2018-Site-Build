@@ -1,0 +1,242 @@
+// Intro div
+#xhema {
+  height: 120vh;
+  @include mobile {
+    height: 135vh;
+  }
+  @include bg-size(cover);
+}
+#press {
+  height: 122vh;
+  @include mobile {
+    height: 155vh;
+  }
+  @include bg-size(cover);
+}
+
+#banner-color-overlay {
+  background-color: $color-black;
+  @include opacity(0.4, 4);
+  height: 120vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#blog {
+  .banner-text {
+    font-size: 2.3vh;
+    padding: 6em 8em 2em;
+    @include tablet {
+      padding: 2em 5em;
+    }
+    @include mobile {
+      padding: 2em 2em;
+    }
+    h1 {
+      font-size: 6vh;
+    }
+    author {
+      font-size: 2.8vh;
+    }
+  }
+}
+
+#xhema, #press {
+  .row {
+    width: 100%;
+    .banner-text {
+      text-shadow: 0 0 .5rem $grey-dark;
+      font-size: 2.3vh;
+      text-align: center;
+      padding: 20em 5em 0em;
+        @include tablet {
+          padding: 1em 5em;
+        }
+        @include mobile {
+          padding: 8em 4em 0;
+        }
+      h1 {
+        @include mobile {
+          font-size: 6vh;
+        }
+        text-align: center;
+        font-size: 6vh;
+        margin: 0 auto;
+        font-family: $font--family--serif;
+        text-transform: none;
+      }
+      h2 {
+        text-align: center;
+        font-size: 2.5vh;
+        margin: .5em auto;
+        font-family: $font--family--serif;
+        text-transform: none;
+      }
+      strong { font-weight: 600; }
+
+      a {
+        color: $color-white;
+        &:focus {
+          border: none;
+          box-shadow:none !important;
+        }
+      }
+      author {
+        font-size: 2.8vh;
+      }
+    }
+  }
+}
+
+#xhema,
+#blog,
+#press {
+
+  .form {
+    border-top:6px solid $color-orange;
+    background: rgba($color-white, 0.8);
+    padding: 2em 3em 3em;
+    margin: 10em 6em 3em;
+    z-index: 999;
+    @include mobile {
+      width: 85%;
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      padding: 1em 1em;
+      //margin: 2em 2em;
+    }
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+    h2 {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.2em;
+      color: $grey;
+    }
+    input{
+      width: 100%;
+      margin: 4px 0;
+      background: $color-white;
+      border: 1px solid $grey-light;
+      padding: 10px;
+      color: $grey;
+      font-size: .7em;
+      font-weight: 600;
+      &:focus {
+        color: $grey;
+      }
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $grey;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: $grey;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: $grey;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $grey;
+      }
+    }
+    .btn {
+      background: $color-orange;
+      color: $color-white;
+      cursor: pointer;
+      &:hover {
+        @include transition(all, .3s);
+        background: darken($color-orange, 10%);
+        color: $color-white;
+      }
+    }
+  }
+  .banner-text {
+    color: $color-white;
+    -webkit-animation: fadeIn 3s;
+    animation: fadeIn 3s;
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+    h1 {
+      text-align: center;
+      font-size: 8vh;
+      margin: 0 auto 0em;
+      font-weight: 400;
+    }
+    strong { font-weight: 600; }
+    a {
+      color: $color-white;
+      text-align: left;
+      font-size: 1.5em;
+      font-weight: 600;
+      border: none;
+      &:hover {
+        border: none;
+      }
+      &:focus {
+        border: none;
+        box-shadow:none !important;
+      }
+    }
+    span {
+      color: $color-white;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    @include mobile {
+      padding-top: 2em;
+      padding-bottom: .5em;
+    }
+    author {
+        margin: 1em 0 1em;
+        display: inline-block;
+        opacity: .5;
+    }
+    a:hover{ text-decoration: none; }
+    a:focus {
+      border: none;
+      box-shadow:none !important;
+    }
+    a:hover h1 { color: $color-white;}
+    h1 {
+      color: $color-white;
+      @include mobile {
+        font-size: 180%;
+      }
+      /*@media (max-width: 765px) {
+        font-size: 180%;
+      }*/
+      small {
+        color: $color-white;
+        display: block;}
+    }
+  }
+}
+.arrow {
+  position: absolute;
+  bottom: 105px;
+  left: 50%;
+  margin-left:-40px;
+  width: 60px;
+  height: 60px;
+  color: $color-white;
+}
+
+.bounce {
+  -webkit-animation: fadeOutDown infinite 2s;
+  animation: fadeOutDown infinite 2s;
+  color: rgba($color-white, .5);
+  font-size: 2.5em;
+}

@@ -1,0 +1,50 @@
+section {
+  &#footer {
+    background: $grey-dark;
+    color: $color-white;
+    padding: 2em 0 0;
+  }
+
+  &#post-body{
+    background: $color-white;
+  }
+}
+
+section {
+  &#footer {
+      margin-top: 0 !important;
+  }
+}
+
+footer {
+  color: $color-white;
+  &.container {
+    padding-top: 1em;
+    padding-bottom: 2em;
+    margin: 0 auto;
+    text-align: left;
+    color: $color-white;
+    @include desktop {
+      width: 75%;
+    }
+    @include tablet {
+      width: 75%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+    .text-center {
+        color: $color-white;
+        text-align: center;
+    }
+    p { color: $color-white; }
+    a {
+      color: $color-white;
+      &.active,
+      &:active,
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+}

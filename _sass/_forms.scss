@@ -1,0 +1,249 @@
+form {
+  line-height: 2em;
+  padding-bottom: 2em;
+}
+.fieldLabel {
+  font-weight: bold;
+  margin-top: 1.5em;
+}
+.defaultText {padding-left: .5em;}
+ol {
+  li {line-height: 2em;}
+  ol {
+    list-style-type: lower-alpha;
+    li {
+      padding-left: .5em;
+      input[type="radio"] {margin-right: .5em;}
+    }
+  }
+}
+#spinner {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    .fa {
+        position: fixed;
+        color: white;
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        z-index: 5000;
+        display: block;
+        font-size: 3em;
+    }
+}
+
+#get-in-touch {
+  form#get-started {
+
+    #FirstName,
+    #State {
+      @include desktop {
+        border-radius: 5px;
+        width: 50%;
+        float: left;
+        margin: 5px auto;
+      }
+      @include tablet {
+        border-radius: 5px;
+        width: 100%;
+        float: none;
+        margin: 6px auto;
+      }
+      @include mobile {
+        border-radius: 5px;
+        width: 100%;
+        float: none;
+        margin: 6px auto;
+      }
+    }
+
+    #LastName,
+    #Email {
+      @include desktop {
+        border-radius: 5px;
+        width: 49%;
+        float: right;
+        margin: 5px auto;
+      }
+      @include tablet {
+        border-radius: 5px;
+        width: 100%;
+        float: none;
+        margin: 6px auto;
+      }
+      @include mobile {
+        border-radius: 5px;
+        width: 100%;
+        float: none;
+        margin: 6px auto;
+      }
+    }
+
+    #Phone,
+    #landing-submit-button {
+      @include desktop {
+        border-radius: 5px;
+        margin: 4px auto;
+        width: 100%;
+      }
+      @include tablet {
+        border-radius: 5px;
+        width: 100%;
+        float: none;
+        margin: 6px auto;
+      }
+      @include mobile {
+        border-radius: 5px;
+        width: 100%;
+        float: none;
+        margin: 6px auto;
+      }
+    }
+  }
+}
+
+#get-your-site{
+
+  color: $color-white;
+  padding: 3em 0;
+  h1, h2, h3, h4, h5, h6 { color: $color-white; }
+  h1 {
+    border-bottom: 4px solid $color-orange;
+    padding: 0.3em 0;
+    width: auto;
+    display: inline-block;
+  }
+  text-align: center;
+  .logo { display: none; }
+
+  form#get-started {
+    @include desktop {
+      padding: 0em 3em 0em;
+      margin: 0em 2em 3em;
+    }
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+    h2 {
+      display: none;
+    }
+
+    #FirstName,
+    #State {
+      @include desktop {
+        border-radius: 5px;
+        width: 50%;
+        float: left;
+        margin: 5px auto;
+      }
+      @include tablet {
+        border-radius: 5px;
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+      }
+      @include mobile {
+        border-radius: 5px;
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+      }
+    }
+
+    #LastName,
+    #Email {
+      @include desktop {
+        border-radius: 5px;
+        width: 49%;
+        float: right;
+        margin: 5px auto;
+      }
+      @include tablet {
+        border-radius: 5px;
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+      }
+      @include mobile {
+        border-radius: 5px;
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+      }
+    }
+
+      #Phone,
+      #landing-submit-button {
+          border-radius: 5px;
+          margin: 4px auto;
+          width: 100%;
+
+          @include tablet {
+            width: 100%;
+            float: none;
+            margin: 0 auto;
+          }
+          @include mobile {
+            width: 100%;
+            float: none;
+            margin: 0 auto;
+          }
+      }
+
+    input{
+      width: 100%;
+      margin: 4px 0;
+      background: $color-white;
+      border: 1px solid $grey-light;
+      padding: 10px;
+      color: $grey;
+      font-size: .7em;
+      font-weight: 600;
+      &:focus {
+        color: $grey;
+      }
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $grey;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: $grey;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: $grey;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $grey;
+      }
+    }
+    .btn {
+      background: $color-orange;
+      color: $color-white;
+      cursor: pointer;
+      border: none;
+      &:hover {
+        @include transition(all, .3s);
+        background: darken($color-orange, 10%);
+        color: $color-white;
+      }
+    }
+  }
+}
+.zendesk-message-success,
+.zendesk-message-failure {
+  display: none;
+  h1, h2 {
+    color: $color-orange;
+    font-size: 30px;
+  }
+}

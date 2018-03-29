@@ -1,0 +1,27 @@
+.sign-up {
+  p {
+    font-size: 1.6em;
+    color: $color-white;
+    display: inline-block;
+  }
+  a {
+    @include mobile {
+      display: inline-block;
+      margin: 1em 0 0 0;
+    }
+    font-size: 1em !important;
+    color: $color-white;
+    border: 1px solid $color-white;
+    padding: .8em 2.5em;
+    &:hover {
+      @include transition(all,.3s);
+      color: $color-orange !important;
+      background: $color-white;
+      text-decoration: none;
+      svg {
+        -webkit-animation: pulse infinite 1s;
+        animation: pulse infinite 1s;
+      }
+    }
+  }
+}
