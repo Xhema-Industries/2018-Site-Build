@@ -5,7 +5,7 @@ image:
 video:
 ---
 
-![Lavish Homes](/images/posts/jones/jones-C-1.jpg){: .callout}
+![Lavish Homes]({{ site.baseurl }}/images/posts/jones/jones-C-1.jpg){: .callout}
 
 They are the lavish homes and historic townhouses that inspire awe and grace the pages of glossy magazines. They are visions in stone and steel, glass and exotic woods, brought to us by distinguished architects and designers.
 
