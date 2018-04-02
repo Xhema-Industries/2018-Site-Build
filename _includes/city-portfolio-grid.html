@@ -1,19 +1,16 @@
-<ul id="rig">
-    <li>
-        <a class="rig-cell gramercy" href="#">
+<ul id="rig" class="row">
+    <li class="col-md-4 mx-2">
+        <a class="rig-cell gramercy" href="#gramercy-modal" data-toggle="modal" data-target="#gramercy-modal">
             <img class="rig-img" src="{{ site.baseurl }}/images/posts/gramercy/Grm1.jpg">
             <span class="rig-overlay"></span>
             <span class="rig-text">Gramercy</span>
         </a>
     </li>
-    <li>
-        <a class="rig-cell ninty-six-street" href="#">
+    <li class="col-md-4 mx-2">
+        <a class="rig-cell ninty-six-street" href="#96street-modal" data-toggle="modal" data-target="#96street-modal">
             <img class="rig-img" src="{{ site.baseurl }}/images/posts/96th-street-townhouse/96th-001.jpg">
             <span class="rig-overlay"></span>
             <span class="rig-text">96th Street Townhouse</span>
         </a>
     </li>
 </ul>
-
-{% include gramercy-grid.html %}
-{% include 96-street-townhouse-grid.html %}

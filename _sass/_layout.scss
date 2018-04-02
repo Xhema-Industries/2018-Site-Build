@@ -30,6 +30,7 @@ body {
   h2,
   h3 {line-height: 1.1;}
   strong {font-weight: 600;}
+  a { cursor: pointer; }
 
   .text-orange { color: $color-orange; }
 
@@ -114,15 +115,25 @@ section {
     color: $color-white;
     padding: 3em 0;
     h1, h2, h3, h4, h5, h6 { color: $color-white; }
-    h1 {
+    h1, h2 {
       border-bottom: 4px solid $color-orange;
-      padding: 0.3em 0;
+      padding: 0;
       width: auto;
       display: inline-block;
+      margin: 0 2em;
+    }
+    .contact-header {
+      .cardcontent {
+        margin: 0 auto;
+        top: -35px;
+      }
     }
     text-align: center;
     .logo { display: none; }
-
+    .form-area {
+      background: $grey-light;
+      padding: 3em 0 0;
+    }
     .form {
       @include desktop {
         padding: 0em 3em 0em;
@@ -144,15 +155,39 @@ section {
       h2 {
         display: none;
       }
+      .col-left {
+        float: left;
+        text-align: left;
+        padding: 0;
+      }
+      .col-right {
+        float: left;
+        text-align: left;
+        margin: 0 auto;
+        padding: 0;
+      }
+      .col-full {
+        float: none;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+      }
+      textarea.landing-input {
+        width: 106%;
+        height: 200px;
+        padding: 10px;
+        border: none;
+      }
+      .landing-inputs {
+        width: 100%;
+      }
       input{
         width: 100%;
-        margin: 4px 0;
+        border: none;
         background: $color-white;
-        border: 1px solid $grey-light;
         padding: 10px;
-        color: $grey;
-        font-size: .7em;
-        font-weight: 600;
+        margin: 0px 0 6px;
+        height: 63px;
         &:focus {
           color: $grey;
         }
@@ -174,6 +209,8 @@ section {
         color: $color-white;
         cursor: pointer;
         border: none;
+        width: 100%;
+        height: 63px;
         &:hover {
           @include transition(all, .3s);
           background: darken($color-orange, 10%);

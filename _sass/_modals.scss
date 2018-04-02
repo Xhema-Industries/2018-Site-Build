@@ -1,14 +1,20 @@
 // Contact BS modal changes
 // main modals
 .modal-backdrop.show {
-  opacity: .8 !important;
+  opacity: 1.0 !important;
 }
 .modal {
-  background: transparentize($color-blue, 0.8);
+  background: transparentize($color-blue, 1.0);
   .modal-content {
     background: none;
     @include box-shadow(none);
     border: none;
+  }
+}
+
+.grid-modal {
+  .modal-body {
+    background: #000;
   }
 }
 
@@ -19,10 +25,11 @@
   margin: 0;
   top: 0;
   left: 0;
+  background: #000;
   .modal-content {
     height: 100%;
     border-radius: 0;
-    padding: 0 6em 6em;
+    padding: 6em 3em !important;
       @include mobile {
         padding: 0 1em;
       }
@@ -55,9 +62,10 @@ button.close {
   color: $color-white;
   font-weight: normal;
   @include opacity(1,100);
-  left: 0.8em;
+  left: 0em;
   position: relative;
   top: 0em;
+  font-size: 3.5em;
   &:hover {
     color: $color-white;
   }

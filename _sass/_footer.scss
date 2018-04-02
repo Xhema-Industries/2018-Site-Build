@@ -47,4 +47,17 @@ footer {
       }
     }
   }
+
+  address {
+    float: left;
+    width: 29%;
+    margin: 0 1em 2em;
+    text-align: left;
+  }
+  .list-inline {
+      padding-left: 0;
+      list-style: none;
+      margin: 1em 0;
+      display: block;
+  }
 }
