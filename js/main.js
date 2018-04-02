@@ -48,32 +48,6 @@ $(function() {
       }
      });
 
-     // Portfolio Click Functions
-
-     // City onClick to Open Grid
-      $( ".city" ).click(function() {
-        $( "#city-grid" ).fadeIn( "slow" );
-      });
-        // each port item onClick functions
-        $( ".gramercy" ).click(function() {
-          $( ".gramercy-open" ).slideIn( "slow" );
-        });
-        $( ".ninty-six-street" ).click(function() {
-          $( ".ninty-six-street-open" ).slideIn( "slow" );
-        });
-
-     // Country onClick to Open Grid
-      $( ".country" ).click(function() {
-        $( "#country-grid" ).fadeIn( "slow" );
-      });
-        // each port item onClick functions
-        $( ".georgian-estate" ).click(function() {
-          $( ".georgian-estate-open" ).slideIn( "slow" );
-        });
-        $( ".hamptons" ).click(function() {
-          $( ".hamptons-open" ).slideIn( "slow" );
-        });
-
 });
 
 // Stop Video from Playing after modalClose

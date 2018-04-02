@@ -2,21 +2,9 @@
 {% if post.tags contains 'our-portfolios' %}
 <article>
   <div class="row card-row position-relative">
-    <div data-aos="fade-right" data-aos-offset="300" class="col-md-6 portfolio-item">{% include portfolio-city.html %}</div>
-    <div data-aos="fade-left" data-aos-offset="350" class="col-md-6 portfolio-item">{% include portfolio-country.html %}</div>
+    <div data-aos="fade-right" data-aos-offset="300" class="col-md-6 portfolio-item" href="#city-grid" data-toggle="modal" data-target="#city-grid">{% include portfolio-city.html %}</div>
+    <div data-aos="fade-left" data-aos-offset="350" class="col-md-6 portfolio-item" href="#country-grid" data-toggle="modal" data-target="#country-grid">{% include portfolio-country.html %}</div>
   </div>
 </article>
 {% endif %}
 {% endfor %}
-
-<div class="row card-row position-relative">
-  <div id="city-grid" class="col-md-12">
-    {% include city-portfolio-grid.html %}
-  </div>
-</div>
-
-<div class="row card-row position-relative">
-  <div id="country-grid" class="col-md-12">
-    {% include country-portfolio-grid.html %}
-  </div>
-</div>

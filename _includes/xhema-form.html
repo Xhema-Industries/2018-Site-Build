@@ -1,24 +1,30 @@
-<form id="get-started" accept-charset="UTF-8" action="http://formspree.io/brenthack35@gmail.com" method="POST">
+<form id="get-started" accept-charset="UTF-8" action="https://formspree.io/brenthack35@gmail.com" method="POST">
   <div class="landing-control-group">
 
-    <div class="landing-inputs">
-      <input class="landing-input" type="text" name="name" placeholder="Your Name" data-val="true" data-val-required="Name Required!" required="required">
+    <div class="row col-left col-md-3">
+      <div class="landing-inputs col-md-12">
+        <input class="landing-input" type="text" name="name" placeholder="Your Name" data-val="true" data-val-required="Name Required!" required="required">
+      </div>
+
+      <div class="landing-inputs col-md-12">
+        <input class="landing-input" type="email" name="email" placeholder="Your Email" data-val="true" data-val-required="Email Required!" required="required">
+      </div>
+
+      <div class="landing-inputs col-md-12">
+        <input class="landing-input" type="text" name="subject" placeholder="Subject">
+      </div>
     </div>
 
-    <div class="landing-inputs">
-      <input class="landing-input" type="email" name="email" placeholder="Your Email" data-val="true" data-val-required="Email Required!" required="required">
+    <div class="row col-right col-md-9">
+      <div class="landing-inputs col-md-12">
+        <textarea class="landing-input" type="text" name="message" placeholder="Type Your Message"></textarea>
+      </div>
     </div>
 
-    <div class="landing-inputs">
-      <input class="landing-input" type="text" name="subject" placeholder="Subject">
-    </div>
-
-    <div class="landing-inputs">
-      <textarea class="landing-input" type="text" name="message" placeholder="Type Your Message"></textarea>
-    </div>
-
-    <div class="landing-inputs">
-      <button id="landing-submit-button" class="btn btn-primary landing-page-button" type="submit">Submit</button>
+    <div class="row col-full col-md-12">
+      <div class="landing-inputs">
+        <button id="landing-submit-button" class="btn btn-primary landing-page-button" type="submit">Submit</button>
+      </div>
     </div>
 
   </div>

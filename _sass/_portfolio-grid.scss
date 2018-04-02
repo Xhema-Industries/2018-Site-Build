@@ -1,13 +1,11 @@
-#country-grid,
-#city-grid { display: none; }
 
 #rig {
-    max-width:900px;
+    max-width:100%;
     margin:0 auto; /*center aligned*/
     padding:0;
     font-size:0; /* Remember to change it back to normal font size if have captions */
     list-style:none;
-    background-color:#000;
+    background: none;
 }
 #rig li {
     display: inline-block;
@@ -51,7 +49,7 @@
     bottom: 0;
     right: 0;
     margin: auto;
-    background: #3DC0F1 url("/2018-Site-Build/images/svg/expand.svg") no-repeat center 20%;
+    background: #000 url("/2018-Site-Build/images/svg/expand.svg") no-repeat center 20%;
     background-size:50px 50px;
     opacity:0;
     filter:alpha(opacity=0);/*For IE6 - IE8*/
@@ -105,16 +103,53 @@
     }
 }
 
-/* Show/Hide */
 
-/* City */
-.gramercy-open,
-.ninty-six-street-open {
-  display: none;
+
+// Gallery
+
+.gal-container{
+	padding: 12px;
+  margin: 0 auto;
+
+.gal-item{
+	overflow: hidden;
+	padding: 3px;
+  display: inline-block;
+  margin: 0 auto;
+  .box {
+  	height: 350px;
+  	overflow: hidden;
+    img{
+    	height: 100%;
+    	width: 100%;
+    	object-fit:cover;
+    	-o-object-fit:cover;
+    }
+  }
+  a:focus{
+  	outline: none;
+  }
+  a:after{
+  	content:"\e003";
+  	font-family: 'Glyphicons Halflings';
+  	opacity: 0;
+  	background-color: rgba(0, 0, 0, 0.75);
+  	position: absolute;
+  	right: 3px;
+  	left: 3px;
+  	top: 3px;
+  	bottom: 3px;
+  	text-align: center;
+      line-height: 350px;
+      font-size: 30px;
+      color: #fff;
+      -webkit-transition: all 0.5s ease-in-out 0s;
+      -moz-transition: all 0.5s ease-in-out 0s;
+      transition: all 0.5s ease-in-out 0s;
+  }
+  a:hover:after{
+  	opacity: 1;
+  }
+
 }
-
-/* Country */
-.georgian-estate-open,
-.hamptons-open {
-  display: none;
 }
