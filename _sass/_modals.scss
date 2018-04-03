@@ -31,7 +31,7 @@
     border-radius: 0;
     padding: 6em 3em !important;
       @include mobile {
-        padding: 0 1em;
+        padding: 6em 1em !important;
       }
     @include transition(all, .3s);
     @media (min-width: 1200px) {
@@ -66,6 +66,10 @@ button.close {
   position: relative;
   top: 0em;
   font-size: 3.5em;
+  @include mobile {
+    top: -1.4em;
+    font-size: 1.5em;
+  }
   &:hover {
     color: $color-white;
   }

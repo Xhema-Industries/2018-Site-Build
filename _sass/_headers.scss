@@ -4,6 +4,10 @@
     background: rgba(0,0,0,0.8);
     color: $color-white;
     position: absolute;
+    @include mobile {
+      position: relative;
+      background: rgba(0,0,0,1);
+    }
     top: 0;
     left: 0;
     z-index: 999;
@@ -16,6 +20,11 @@
       display: inline-block;
       padding: 0;
       margin: .5em 0 0 2em;
+      @include mobile {
+        margin: 0 auto 1em;
+        text-align: left;
+        width: auto;
+      }
       text-align: center;
     }
     p {
@@ -28,6 +37,9 @@
 #controls {
   .carousel-control-prev {
     left: 56% !important;
+    @include mobile {
+      left: 29% !important;
+    }
   }
   .carousel-control-next {
     right: 0 !important;
@@ -45,6 +57,13 @@
     top: 36%;
     right: 15%;
     width: 200px;
+
+    @include mobile {
+      right: 22%;
+      top: 20%;
+      width: 130px;
+    }
+
     height: auto;
     box-shadow: 5px 5px rgba(0,0,0,0.5);
     -ms-transform: rotate(20deg); /* IE 9 */
