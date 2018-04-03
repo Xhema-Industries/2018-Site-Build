@@ -2,7 +2,7 @@ $(function() {
 
     // Animate on Scroll
     AOS.init({
-      disable: 'mobile';
+      disable: 'mobile'
     });
 
     // Bootstrap Carousel - add 'active' Class to first slide
