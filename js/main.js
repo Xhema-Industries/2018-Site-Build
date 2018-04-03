@@ -9,7 +9,7 @@ $(function() {
 
     // Animate on Scroll
     AOS.init({
-      // disable: 'mobile'
+      disable: 'mobile'
     });
 
     // Bootstrap carousel add active to first slide and Time Interval
