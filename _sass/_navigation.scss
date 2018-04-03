@@ -97,7 +97,7 @@ header {
   .navbar,
   .dropdown-menu {
     background-color: $color-black;
-    @include opacity(0.7, 7);
+    @include opacity(0.95, 9);
     color: $color-white !important;
     font-family: $font--family--serif;
     font-weight: lighter;
@@ -178,7 +178,7 @@ header {
     .dropdown-menu {
       .active > * {background-color: transparent;}
       .divider {
-      @include opacity(.4,4);
+      @include opacity(.7,7);
       }
       a {
         text-transform: initial;
@@ -194,7 +194,7 @@ header {
 
   .navbar {
     @include mobile {
-      padding: 1em;
+      padding: 1em 5em 1em 0;
       img {
         padding-top: .5em;
         max-height: 45px;
@@ -202,7 +202,7 @@ header {
   @include mobile {
     .navbar-header {
       width: 100%;
-      padding: 0 2em 0 0;
+      padding: 0 2em 0 1em;
     }
   }
     }

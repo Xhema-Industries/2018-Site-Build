@@ -109,14 +109,24 @@ section {
     @include noslant(0, $color-off-white);
     margin-bottom: 0;
     padding: 1em 0;
+    @include mobile {
+      padding: 0;
+    }
   }
   &#contact {
     background: $color-grey;
+    @include mobile {
+      background: #000;
+    }
     color: $color-white;
     padding: 3em 0;
+    @include mobile {
+      padding: 3em 0 0;
+    }
+
     h1, h2, h3, h4, h5, h6 { color: $color-white; }
     h1, h2 {
-      border-bottom: 4px solid $color-orange;
+      border-bottom: 2px solid $color-orange;
       padding: 0;
       width: auto;
       display: inline-block;
@@ -172,14 +182,31 @@ section {
         margin: 0 auto;
         padding: 0;
       }
+      .col-left,
+      .col-right,
+      .col-full {
+        @include mobile {
+          display: inline-block;
+          margin: 0 auto;
+          padding: 0;
+        }
+      }
       textarea.landing-input {
         width: 106%;
         height: 200px;
         padding: 10px;
         border: none;
+        @include mobile {
+          width: 100%;
+        }
       }
       .landing-inputs {
         width: 100%;
+        @include mobile {
+          display: inline-block;
+          margin: 0 auto;
+          padding: 0;
+        }
       }
       input{
         width: 100%;

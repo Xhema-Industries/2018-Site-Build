@@ -1,15 +1,21 @@
 // Intro div
 #xhema {
   height: 120vh;
+  background-position: 50% -180px fixed;
+  background-size: cover !important;
+
   @include mobile {
-    height: 135vh;
+    height: 70vh;
+    background-size: cover !important;
+    background-position:50% 0px !important;
   }
-  @include bg-size(cover);
+
 }
+
 #press {
   height: 122vh;
   @include mobile {
-    height: 155vh;
+    height: 82vh;
   }
   @include bg-size(cover);
 }
@@ -18,6 +24,9 @@
   background-color: $color-black;
   @include opacity(0.4, 4);
   height: 120vh;
+  @include mobile {
+    height: 70vh;
+  }
   position: absolute;
   top: 0;
   bottom: 0;

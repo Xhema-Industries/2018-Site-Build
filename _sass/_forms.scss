@@ -1,6 +1,9 @@
 form {
   line-height: 2em;
   padding-bottom: 2em;
+  @include mobile {
+    padding-bottom: .3em;
+  }
 }
 .fieldLabel {
   font-weight: bold;
