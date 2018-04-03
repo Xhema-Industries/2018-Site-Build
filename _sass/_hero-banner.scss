@@ -5,7 +5,7 @@
   background-size: cover !important;
 
   @include mobile {
-    height: 82vh;
+    height: 92vh;
     background-size: cover !important;
     background-position:50% 0px !important;
   }
@@ -25,7 +25,7 @@
   @include opacity(0.4, 4);
   height: 120vh;
   @include mobile {
-    height: 70vh;
+    height: 92vh;
   }
   position: absolute;
   top: 0;
