@@ -194,7 +194,7 @@ header {
 
   .navbar {
     @include mobile {
-      padding: 1em 5em 1em 0;
+      padding: 1em 0em 1em 0;
       img {
         padding-top: .5em;
         max-height: 45px;
