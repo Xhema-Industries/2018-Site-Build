@@ -1,41 +1,36 @@
 $(function() {
-  var hash = location.hash;
-
-    $('button.close').click(function(evt){
-      evt.preventDefault();
-      window.location.hash = '';
-      $('#submited').modal('hide');
-    });
 
     // Animate on Scroll
     AOS.init({
-      disable: 'mobile'
+      disable: 'mobile';
     });
 
-    // Bootstrap carousel add active to first slide and Time Interval
+    // Bootstrap Carousel - add 'active' Class to first slide
     $('#NYSpaces').carousel({
       interval: false
     })
     $(".carousel-inner .carousel-item:nth-child(1)").addClass("active");
 
+    // Add 'active' Class to Nav items when clicked
     $('.nav a').on('click', function(){
       $('.nav').find('active').removeClass('active');
       $(this).parent().addClass('active');
     });
 
-     $(window).scroll(function() {
-       if ($(document).scrollTop() > 100) {
-         $('.nav-item button').show(50);
-         $('.navbar').addClass('responsive-padding-scroll');
+    // Scroll to Top function
+    $(window).scroll(function() {
+     if ($(document).scrollTop() > 100) {
+       $('.nav-item button').show(50);
+       $('.navbar').addClass('responsive-padding-scroll');
+       $('nav').removeClass('shift');
+     } else {
+       $('.navbar').addClass('responsive-padding');
+       $('.nav-item button').hide(50);
+       $('#ritter-tab').on('hide.bs.collapse', function() {
          $('nav').removeClass('shift');
-       } else {
-         $('.navbar').addClass('responsive-padding');
-         $('.nav-item button').hide(50);
-         $('#ritter-tab').on('hide.bs.collapse', function() {
-           $('nav').removeClass('shift');
-         });
-       }
-     });
+       });
+     }
+    });
 
      $('a.nav-link').on('click', function(e) {
       var target = $(this.hash);
@@ -49,20 +44,3 @@ $(function() {
      });
 
 });
-
-// Stop Video from Playing after modalClose
-autoPlayYouTubeModal();
-
-//FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
-function autoPlayYouTubeModal() {
-   var trigger = $("body").find('[data-toggle="modal"]');
-   trigger.click(function () {
-       var theModal = $(this).data("target"),
-           videoSRC = $(this).attr("data-theVideo"),
-           videoSRCauto = videoSRC + "?autoplay=1";
-       $(theModal + ' iframe').attr('src', videoSRCauto);
-       $(theModal + ' button.close').click(function () {
-           $(theModal + ' iframe').attr('src', videoSRC);
-       });
-   });
-};
