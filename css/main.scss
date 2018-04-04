@@ -52,12 +52,6 @@ $large-width: 1645px;
 /// Load SASS files
 @charset "utf-8";
 
-// Import GoogleFonts Here
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800|family=Vollkorn");
-
-// Import Animate On Scroll Styles Here
-@import url("https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css");
-
 // Load mixins manifest
 @import "mixins/mixins";
 @import "mixins/extends";
