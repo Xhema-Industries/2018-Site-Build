@@ -43,4 +43,65 @@ $(function() {
       }
      });
 
+     // Portfolio Functions
+     var cityport = $("#city-port");
+     var countryport = $("#country-port");
+     var portfolio = $("#portfolio");
+
+     $('.city-pop').on('click', function() {
+        $(cityport).slideToggle();
+        $(countryport).slideUp();
+        // animate to portfolio div
+        var target = cityport;
+         if( target.length ) {
+             event.preventDefault();
+             $('html, body').stop().animate({
+                 scrollTop: target.offset().top - 100
+             }, 1000);
+         }
+
+     });
+     $('.country-pop').on('click', function() {
+        $(countryport).slideToggle();
+        $(cityport).slideUp();
+        // animate to portfolio div
+        var target = countryport;
+         if( target.length ) {
+             event.preventDefault();
+             $('html, body').stop().animate({
+                 scrollTop: target.offset().top - 100
+             }, 1000);
+         }
+     });
+
+     // Close Portfolio Sections
+     $('#city-port .close').on('click', function() {
+        $(cityport).slideUp();
+
+        var target = portfolio;
+         if( target.length ) {
+             event.preventDefault();
+             $('html, body').stop().animate({
+                 scrollTop: target.offset().top - 100
+             }, 1000);
+         }
+     });
+     $('#country-port .close').on('click', function() {
+        $(countryport).slideUp();
+
+        var target = portfolio;
+         if( target.length ) {
+             event.preventDefault();
+             $('html, body').stop().animate({
+                 scrollTop: target.offset().top - 100
+             }, 1000);
+         }
+     });
+
+     // Open Gallery
+     $('a.rig-cell').on('click', function() {
+        var mydiv = $(this).attr('data');
+          $(mydiv).slideToggle();
+     });
+
 });

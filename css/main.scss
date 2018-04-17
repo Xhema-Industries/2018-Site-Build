@@ -78,3 +78,8 @@ $large-width: 1645px;
 @import "callout";
 @import "about";
 @import "carousel";
+
+// Load photoswipe
+@import "photoswipe/main.scss";
+// Load photoswipe ui
+@import "photoswipe/default-skin/default-skin.scss";
