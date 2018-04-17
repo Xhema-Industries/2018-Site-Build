@@ -3,14 +3,14 @@
 
   {% include addthis.html %}
   {% include head.html %}
-  {% include modals.html %}
 
   <body>
     {% include header.html %}
+
     {% include home-banner.html %}
 
     <section id="about">
-      <div class="container" data-aos="fade-down" data-aos-offset="300">
+      <div class="container" data-aos="fade-down" data-aos-offset="300" data-aos-once="true">
 
         {% include about.html %}
 
@@ -26,7 +26,7 @@
     </section><!-- /#portfolio -->
 
     <section id="capabilities">
-      <div class="container" data-aos="fade-down" data-aos-offset="300">
+      <div class="container" data-aos="fade-down" data-aos-offset="300" data-aos-once="true">
 
         {% include capabilities.html %}
 
@@ -45,7 +45,7 @@
     </section>
 
     <section id="press">
-      <div class="container-fluid" data-aos="fade-down" data-aos-offset="300">
+      <div class="container-fluid" data-aos="fade-down" data-aos-offset="300" data-aos-once="true">
 
         {% include press.html %}
 
@@ -53,13 +53,14 @@
     </section><!-- /#press -->
 
     <section id="contact">
-      <div class="container-fluid" data-aos="fade-down" data-aos-offset="300">
+      <div class="container-fluid">
 
           {% include contact.html %}
 
       </div><!-- /.container -->
     </section><!-- /#contact -->
 
+    {% include pswp-template.html %}
     {% include footer.html %}
     {% include script.html %}
 
