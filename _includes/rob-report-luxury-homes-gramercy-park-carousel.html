@@ -1,0 +1,27 @@
+<div id="RobReportGramercyPark" class="carousel mr-auto ml-auto slide" data-ride="carousel">
+  <div class="carousel-inner text-center mb-0" role="listbox">
+    {% assign slidesRobReportGramercyPark = (site.posts | sort: 'order') %}
+    {% for post in slidesRobReportGramercyPark %}
+      {% if post.categories contains 'rob-report-gramercy-slide' %}
+
+        <div id="rob-report-gramercy-park" class="carousel-item container-fluid"}>
+          {{ post.content }}
+        </div>
+
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div id="controls">
+
+    <div class="cover-image"><img src="{{ site.baseurl }}/images/posts/press/rob-report-luxury-home-gramercy-townhouse/rob-report-luxury-home-gramercy-cover.jpg" /></div>
+
+    <a class="carousel-control-prev" href="#RobReportGramercyPark" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#RobReportGramercyPark" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>

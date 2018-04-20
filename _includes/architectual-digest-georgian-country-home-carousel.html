@@ -1,0 +1,27 @@
+<div id="ArchitectDigestGeorgian" class="carousel mr-auto ml-auto slide" data-ride="carousel">
+  <div class="carousel-inner text-center mb-0" role="listbox">
+    {% assign slidesArchitectGeorgian = (site.posts | sort: 'order') %}
+    {% for post in slidesArchitectGeorgian %}
+      {% if post.categories contains 'architect-digest-georgian-slide' %}
+
+        <div id="architect-digest-georgian" class="carousel-item container-fluid"}>
+          {{ post.content }}
+        </div>
+
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div id="controls">
+
+    <div class="cover-image"><img src="{{ site.baseurl }}/images/posts/press/architectual-digest-georgian-country-house/architectual-digest-georgian-cover.jpg" /></div>
+
+    <a class="carousel-control-prev" href="#ArchitectDigestGeorgian" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#ArchitectDigestGeorgian" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>

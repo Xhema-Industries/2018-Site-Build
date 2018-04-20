@@ -35,8 +35,11 @@ body {
   .text-orange { color: $color-orange; }
 
   .container-fluid {
-    padding: 0;
+    @include desktop {
+      padding: 0;
+    }
   }
+
   :placeholder-shown {
     font-weight: lighter;
   }

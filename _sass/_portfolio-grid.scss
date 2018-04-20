@@ -8,6 +8,14 @@
   height: 100%;
   margin: 0 auto;
   text-align: center;
+
+  .ml-2, .mx-2 {
+    @include mobile {
+      margin-left: 0rem !important;
+      margin-right: 0rem !important;
+    }
+  }
+
   .btn {
     background: $color-orange;
     color: $color-white;
@@ -19,6 +27,14 @@
     margin: 9px auto;
     float: none;
     font-size: 1em;
+
+    @include mobile {
+      width: 100%;
+      height: 36px;
+      display: block;
+      margin: 20px auto;
+    }
+
     &:hover {
       @include transition(all, .3s);
       background: darken($color-orange, 10%);
@@ -46,6 +62,12 @@
         width: 100% !important;
         height: 360px;
         max-width: 47%;
+        @include mobile {
+          margin:15px auto 0;
+          width: 100% !important;
+          height: auto;
+          max-width: 100%;
+        }
 
        a {
          height: 360px;
@@ -56,6 +78,10 @@
            width: auto;
            max-width: 100%;
          }
+       }
+       img {
+         position: relative;
+         top: -80px;
        }
     }
 }

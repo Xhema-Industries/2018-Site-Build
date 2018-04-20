@@ -27,6 +27,9 @@
   // margin: 0 5px 5px 0;
   // width: 150px;
   margin: 0 10px 10px 10px;
+  @include mobile {
+    margin: 0 10px 10px 0;
+  }
   width: 47%;
   height: 360px;
   overflow: hidden;
@@ -162,6 +165,11 @@
 	transform-origin: left top;
 	/* for open/close transition */
 	transition: transform $pswp__show-hide-transition-duration cubic-bezier(.4,0,.22,1);
+
+  @include mobile {
+    transform: translate3d(0px, 0px, 0px) scale(1) !important;
+  }
+
 }
 
 .pswp__bg {

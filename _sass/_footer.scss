@@ -14,7 +14,7 @@ section {
   &#footer {
       margin-top: 0 !important;
       @include mobile {
-        padding: 0 0 6em 0;
+        padding: .4em 0 .4em 0;
       }
   }
 }
@@ -40,7 +40,13 @@ footer {
         color: $color-white;
         text-align: center;
     }
-    p { color: $color-white; }
+    p {
+      color: $color-white;
+      @include mobile {
+        text-align: left;
+        font-size: .8em;
+      }
+    }
     a {
       color: $color-white;
       &.active,
@@ -60,7 +66,7 @@ footer {
       float: none;
       width: 50%;
       margin: 0 auto 1em;
-      text-align: center;
+      text-align: left;
       font-size: .8em;
     }
   }
