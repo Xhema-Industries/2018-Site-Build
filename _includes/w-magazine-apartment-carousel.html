@@ -1,0 +1,27 @@
+<div id="WMagazineApartment" class="carousel mr-auto ml-auto slide" data-ride="carousel">
+  <div class="carousel-inner text-center mb-0" role="listbox">
+    {% assign slidesWMagazineApartment = (site.posts | sort: 'order') %}
+    {% for post in slidesWMagazineApartment %}
+      {% if post.categories contains 'w-magazine-slide' %}
+
+        <div id="w-magazine-apartment" class="carousel-item container-fluid"}>
+          {{ post.content }}
+        </div>
+
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div id="controls">
+
+    <div class="cover-image"><img src="{{ site.baseurl }}/images/posts/press/w-magazine-decorators-apartment/w-magazine-apartment-cover.jpg" /></div>
+
+    <a class="carousel-control-prev" href="#WMagazineApartment" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#WMagazineApartment" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>

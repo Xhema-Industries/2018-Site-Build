@@ -6,7 +6,7 @@ $(function() {
     });
 
     // Bootstrap Carousel - add 'active' Class to first slide
-    $('#NYSpaces').carousel({
+    $('.carousel').carousel({
       interval: false
     })
     $(".carousel-inner .carousel-item:nth-child(1)").addClass("active");
@@ -43,11 +43,12 @@ $(function() {
       }
      });
 
-     // Portfolio Functions
+     // Portfolio Section Functions
+     // Create Vars from Divs
      var cityport = $("#city-port");
      var countryport = $("#country-port");
      var portfolio = $("#portfolio");
-
+     // Open City Portfolio Section
      $('.city-pop').on('click', function() {
         $(cityport).slideToggle();
         $(countryport).slideUp();
@@ -59,8 +60,8 @@ $(function() {
                  scrollTop: target.offset().top - 100
              }, 1000);
          }
-
      });
+     // Open Country Portfolio Section
      $('.country-pop').on('click', function() {
         $(countryport).slideToggle();
         $(cityport).slideUp();
@@ -73,11 +74,9 @@ $(function() {
              }, 1000);
          }
      });
-
-     // Close Portfolio Sections
+     // Close City Portfolio Section and scroll up
      $('#city-port .close').on('click', function() {
         $(cityport).slideUp();
-
         var target = portfolio;
          if( target.length ) {
              event.preventDefault();
@@ -86,9 +85,9 @@ $(function() {
              }, 1000);
          }
      });
+     // Close Country Portfolio Section and scroll up
      $('#country-port .close').on('click', function() {
         $(countryport).slideUp();
-
         var target = portfolio;
          if( target.length ) {
              event.preventDefault();
@@ -97,11 +96,79 @@ $(function() {
              }, 1000);
          }
      });
-
-     // Open Gallery
+     // Intiate Image Gallery
      $('a.rig-cell').on('click', function() {
         var mydiv = $(this).attr('data');
           $(mydiv).slideToggle();
+     });
+
+     // In The Press Functions
+     // Show Hide Press Magazines
+     var pressThumb = $('.press-thumbs ul li a');
+     var pressDivID = $(pressThumb).attr('data');
+
+     var showDiv1 = $('#ArchitectDigestGeorgianThumb').attr('data');
+     var showDiv2 = $('#NYSpacesThumb').attr('data');
+     var showDiv3 = $('#RobReportjimXhemaThumb').attr('data');
+     var showDiv4 = $('#ArchitectDigestCentralParkThumb').attr('data');
+     var showDiv5 = $('#RobReportGramercyParkThumb').attr('data');
+     var showDiv6 = $('#WMagazineApartmentThumb').attr('data');
+     // Show First
+     $('#ArchitectDigestGeorgian').show();
+     // Thumbnail OnClick Function
+     $('#ArchitectDigestGeorgianThumb').on('click', function() {
+       // Create Show Var from Data Attribute
+        $(showDiv1).show();
+        $(showDiv2).hide();
+        $(showDiv3).hide();
+        $(showDiv4).hide();
+        $(showDiv5).hide();
+        $(showDiv6).hide();
+     });
+     $('#NYSpacesThumb').on('click', function() {
+       // Create Show Var from Data Attribute
+        $(showDiv2).show();
+        $(showDiv1).hide();
+        $(showDiv3).hide();
+        $(showDiv4).hide();
+        $(showDiv5).hide();
+        $(showDiv6).hide();
+     });
+     $('#RobReportjimXhemaThumb').on('click', function() {
+       // Create Show Var from Data Attribute
+        $(showDiv3).show();
+        $(showDiv1).hide();
+        $(showDiv2).hide();
+        $(showDiv4).hide();
+        $(showDiv5).hide();
+        $(showDiv6).hide();
+     });
+     $('#ArchitectDigestCentralParkThumb').on('click', function() {
+       // Create Show Var from Data Attribute
+        $(showDiv4).show();
+        $(showDiv1).hide();
+        $(showDiv2).hide();
+        $(showDiv3).hide();
+        $(showDiv5).hide();
+        $(showDiv6).hide();
+     });
+     $('#RobReportGramercyParkThumb').on('click', function() {
+       // Create Show Var from Data Attribute
+        $(showDiv5).show();
+        $(showDiv1).hide();
+        $(showDiv2).hide();
+        $(showDiv3).hide();
+        $(showDiv4).hide();
+        $(showDiv6).hide();
+     });
+     $('#WMagazineApartmentThumb').on('click', function() {
+       // Create Show Var from Data Attribute
+        $(showDiv6).show();
+        $(showDiv1).hide();
+        $(showDiv2).hide();
+        $(showDiv3).hide();
+        $(showDiv4).hide();
+        $(showDiv5).hide();
      });
 
 });

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "New York Spaces"
-subtitle: "Jan-Feb 2010"
+subtitle: "East Side Townhouse"
 categories: new-york-spaces-slide
 tag: press
 order: 1

@@ -13,9 +13,9 @@
 }
 
 #press {
-  height: 122vh;
+  height: 148vh;
   @include mobile {
-    height: 92vh;
+    height: auto;
   }
   @include bg-size(cover);
 }

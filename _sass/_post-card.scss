@@ -5,7 +5,14 @@
 #photos {
   background: $color-off-white;
   h1, h2, h3, h4, h5, h6 { color: $grey-dark; }
-  h3 { margin: 1em 0 .2em; font-weight: 600; font-size: 1.2em; }
+  h3 {
+    margin: 1em 0 .2em;
+    font-weight: 600;
+    font-size: 1.2em;
+    @include mobile {
+      margin: 0em 0 .2em;
+    }
+  }
   hr.orange {
     background: $color-orange;
     width: 20%;
@@ -178,15 +185,23 @@
           text-align: center;
           width: 100%;
           font-size: 1em;
+          @include mobile {
+            padding: 0 1em;
+          }
         }
 
       }
-      .city {
+      .city, .country {
         img {
-            position: relative;
-            top: -80px;
+          position: relative;
+          top: 0px;
+            @include mobile {
+              top: 0;
+              height: 100%;
+            }
         }
       }
+
     }
 
     .thumbs {
