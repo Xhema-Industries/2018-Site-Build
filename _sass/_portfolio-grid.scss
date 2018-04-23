@@ -124,10 +124,14 @@
     transition:all 0.6s;
 }
 #rig li:hover .rig-overlay {
-    opacity:0.8;
+    opacity:0.4;
 }
 
 /* If have captions */
+
+.rig-text.text-close {
+  display: none;
+}
 .rig-text {
     display:block;
     padding:0 30px;
@@ -138,7 +142,7 @@
     text-align:center;
     text-transform:capitalize;
     font-size:18px;
-    font-weight:bold;
+    font-weight:normal;
     font-family: 'Oswald', sans-serif;
     font-weight:normal!important;
     top:40%;
@@ -147,6 +151,10 @@
     filter:alpha(opacity=0);/*For older IE*/
     transform:translateY(-20px);
     transition:all .3s;
+    strong {
+      font-weight: bold;
+      font-size: 20px;
+    }
 }
 #rig li:hover .rig-text {
     transform:translateY(0px);
