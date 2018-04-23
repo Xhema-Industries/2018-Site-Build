@@ -98,8 +98,18 @@ $(function() {
      });
      // Intiate Image Gallery
      $('a.rig-cell').on('click', function() {
+
         var mydiv = $(this).attr('data');
           $(mydiv).slideToggle();
+          $(mydiv).toggleClass('active');
+
+            if ($(mydiv).hasClass('active')){
+                $('.rig-text.text-close').show();
+                $('.rig-text.text-open').hide();
+            } else {
+                $('.rig-text.text-close').hide();
+                $('.rig-text.text-open').show();
+            }
      });
 
      // In The Press Functions
