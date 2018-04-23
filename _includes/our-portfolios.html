@@ -9,46 +9,8 @@
 {% endif %}
 {% endfor %}
 
-<div id="city-port" class="port-start">
-  <ul id="rig" class="row">
-      <li class="col-md-5 mx-2">
-          <a class="rig-cell gramercy" data="#gramercy-open">
-              <img class="rig-img" src="{{ site.baseurl }}/images/posts/city/gramercy/Grm1.jpg">
-              <span class="rig-overlay"></span>
-              <span class="rig-text">Gramercy</span>
-          </a>
-      </li>
-      {% include gramercy-grid.html %}
-      <li class="col-md-5 mx-2">
-          <a class="rig-cell ninty-six-street" data="#ninty-six-street-open">
-              <img class="rig-img" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-001.jpg">
-              <span class="rig-overlay"></span>
-              <span class="rig-text">96th Street Townhouse</span>
-          </a>
-      </li>
-      {% include 96-street-townhouse-grid.html %}
-  </ul>
-  <button id="landing-submit-button" class="btn btn-primary landing-page-button close" type="button">Close <i class="fas fa-angle-up"></i></button>
-</div>
+<!-- City Portfolio Items -->
+{% include city-portfolio-grid.html %}
 
-<div id="country-port" class="port-start">
-  <ul id="rig" class="row">
-      <li class="col-md-5 mx-2">
-          <a class="rig-cell georgian-estate" data="#georgian-estate-open">
-              <img class="rig-img" src="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-2.jpg">
-              <span class="rig-overlay"></span>
-              <span class="rig-text">Georgian Estate</span>
-          </a>
-      </li>
-      {% include georgian-estate-grid.html %}
-      <li class="col-md-5 mx-2">
-          <a class="rig-cell hamptons" data="#hamptons-open">
-              <img class="rig-img" src="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-001.jpg">
-              <span class="rig-overlay"></span>
-              <span class="rig-text">Camuto Hamptons</span>
-          </a>
-      </li>
-      {% include hamptons-grid.html %}
-  </ul>
-  <button id="landing-submit-button" class="btn btn-primary landing-page-button close" type="button">Close <i class="fas fa-angle-up"></i></button>
-</div>
+<!-- Country Portfolio Items -->
+{% include country-portfolio-grid.html %}
