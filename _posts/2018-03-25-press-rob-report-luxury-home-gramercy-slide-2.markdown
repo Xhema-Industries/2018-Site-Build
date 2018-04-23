@@ -7,4 +7,4 @@ tag: press
 order: 2
 ---
 
-![Rob Report - Luxury Home - Gramercy Park Townhouse]({{ site.baseurl }}/images/posts/press/rob-report-luxury-home-gramercy-townhouse/rob-report-luxury-home-gramercy-002.jpg){: .d-block .img-fluid}
+![Rob Report - Luxury Home - Gramercy Park Townhouse]({{ site.baseurl }}/images/posts/press/rob-report-luxury-home-gramercy-townhouse/rob-report-luxury-home-gramercy-002.jpg){: .d-block .img-fluid .lazy}

@@ -7,4 +7,4 @@ tag: press
 order: 1
 ---
 
-![Rob Report - Luxury Home - Jim Xhema]({{ site.baseurl }}/images/posts/press/rob-report-luxury-home-jim-xhema/rob-report-luxury-home-jim-xhema-001.jpg){: .d-block .img-fluid}
+![Rob Report - Luxury Home - Jim Xhema]({{ site.baseurl }}/images/posts/press/rob-report-luxury-home-jim-xhema/rob-report-luxury-home-jim-xhema-001.jpg){: .d-block .img-fluid .lazy}
