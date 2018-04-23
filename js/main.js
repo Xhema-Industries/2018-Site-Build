@@ -5,6 +5,13 @@ $(function() {
       disable: 'mobile'
     });
 
+    // Lazy Load
+    $('.lazy').lazy({
+      effect: 'fadeIn',
+      effectTime: 1000,
+      threshold: 0
+    });
+
     // Bootstrap Carousel - add 'active' Class to first slide
     $('.carousel').carousel({
       interval: false
