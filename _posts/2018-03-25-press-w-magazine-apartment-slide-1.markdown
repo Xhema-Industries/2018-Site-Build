@@ -7,4 +7,4 @@ tag: press
 order: 1
 ---
 
-![W Magazine - Decorators Apartment]({{ site.baseurl }}/images/posts/press/w-magazine-decorators-apartment/w-magazine-apartment-001.jpg){: .d-block .img-fluid}
+![W Magazine - Decorators Apartment]({{ site.baseurl }}/images/posts/press/w-magazine-decorators-apartment/w-magazine-apartment-001.jpg){: .d-block .img-fluid .lazy}
