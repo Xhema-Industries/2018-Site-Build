@@ -11,7 +11,7 @@ title: Xhema Industries
 # Change email to '$xhema_email' when ready to go live
 email: contact@xhema.com
 description: Building Beyond Comprimise
-baseurl: "/2018-Site-Build" # /2018-Site-Build the subpath of your site, e.g. /blog
+baseurl: "" # /2018-Site-Build the subpath of your site, e.g. /blog
 url: "/" # the base hostname & protocol for your site, e.g. http://example.com
 logo:
 github_username:  xhema-indsutries
@@ -36,16 +36,22 @@ exclude:
 xhema: Xhema Industries
 xhema_short: xhema
 xhema_url: https://xhema.com
-xhema_ct_address: Oak and Division Street West - P.O. Box 4422, Greenwich, Connecticut 06831
+xhema_ct_address: Oak and Division Street West
+xhema_ct_address2: P.O. Box 4422
+xhema_ct_address3: Greenwich, Connecticut 06831
 xhema_ct_phone: 203.531.6070
 xhema_ct_fax: 203.531.1089
-xhema_nyc_address: 150 East 58th Street - Architects & Designers Building, New York, New York 10155
+xhema_nyc_address: 150 East 58th Street
+xhema_nyc_address2: Architects & Designers Building
+xhema_nyc_address3: New York, New York 10155
 xhema_nyc_phone: 212.752.0270
-xhema_nyc_fax: 212.31 7.1477
-xhema_ny_address: 34 Locust Avenue - P.O. Box 623, Rye, New York 10580
+xhema_nyc_fax: 212.317.1477
+xhema_ny_address: 34 Locust Avenue
+xhema_ny_address2: P.O. Box 623
+xhema_ny_address3: Rye, New York 10580
 xhema_ny_phone: 914.967.4571
 xhema_email: contact@xhema.com
-xhema_copyright: xhema Industries, INC. All rights reserved.
+xhema_copyright: Xhema Industries, Inc. All rights reserved.
 
 # Social - xhema social accounts
 social_links:

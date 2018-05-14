@@ -13,10 +13,17 @@ $(function() {
     });
 
     // Bootstrap Carousel - add 'active' Class to first slide
-    $('.carousel').carousel({
+    $('.carousel-home').carousel({
+      interval: 5000
+    });
+    $('.carousel-port').carousel({
       interval: false
-    })
-    $(".carousel-inner .carousel-item:nth-child(1)").addClass("active");
+    });
+    $('.carousel-press').carousel({
+      interval: false
+    });
+    $(".carousel-home .carousel-item:nth-child(1)").addClass("active");
+    $(".carousel-press .carousel-item:nth-child(1)").addClass("active");
 
     // Add 'active' Class to Nav items when clicked
     $('.nav a').on('click', function(){
@@ -103,20 +110,15 @@ $(function() {
              }, 1000);
          }
      });
-     // Intiate Image Gallery
-     $('a.rig-cell').on('click', function() {
-
-        var mydiv = $(this).attr('data');
-          $(mydiv).slideToggle();
-          $(mydiv).toggleClass('active');
-
-            if ($(mydiv).hasClass('active')){
-                $('.rig-text.text-close').show();
-                $('.rig-text.text-open').hide();
-            } else {
-                $('.rig-text.text-close').hide();
-                $('.rig-text.text-open').show();
-            }
+     // Close Modal
+     $('.my-gallery button.close').on('click', function() {
+        var target = portfolio;
+         if( target.length ) {
+             event.preventDefault();
+             $('html, body').stop().animate({
+                 scrollTop: target.offset().top + 100
+             }, 1000);
+         }
      });
 
      // In The Press Functions
