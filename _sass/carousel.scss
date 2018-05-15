@@ -38,6 +38,10 @@
 			a {
 				cursor: pointer;
 				display: inline-block;
+				&:hover {
+					@include transition(all, .3s);
+		      filter:brightness(140%);
+				}
 				img {
 					width: 100%;
 			    height: auto;
@@ -63,7 +67,12 @@
 
 .carousel-control-next,
 .carousel-control-prev {
-    opacity: .8;
+		opacity: 0.7;
+    &:hover {
+      @include transition(all, .3s);
+			opacity: 1;
+			color: $color-white;
+    }
 }
 
 

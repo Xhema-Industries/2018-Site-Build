@@ -1,0 +1,8 @@
+- id: century-old-chateau
+  description: Century Old Chateau
+  imagefolder: country
+  images:
+  - name: 001.jpg
+  - name: 002.jpg
+  - name: 003.jpg
+  - name: 004.jpg

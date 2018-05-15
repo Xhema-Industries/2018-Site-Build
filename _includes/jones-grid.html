@@ -7,120 +7,16 @@
     </button>
 
     <div class="carousel-inner">
-
-    <div class="carousel-item active">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-001.jpg">
-            <img class="lazy d-block w-100" data-src="{{ site.baseurl }}/images/posts/country/jones/jones-001.jpg" alt="Jones" />
-        </a>
-
+    {% for gallery in site.data.jones %}
+      {% for image in gallery.images %}
+        <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
+            <a href="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" target="_blank" title="{{ gallery.description }}">
+                <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" alt="{{ gallery.description }}" />
+            </a>
+        </div>
+      {% endfor %}
+    {% endfor %}
     </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-002.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-002.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-003.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-003.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-004.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-004.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-005.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-005.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-006.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-006.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-007.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-007.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-008.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-008.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-009.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-009.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-010.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-010.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-011.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-011.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-012.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-012.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-013.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-013.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-014.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-014.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-015.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-015.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/jones/jones-016.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/jones/jones-016.jpg" alt="Jones" />
-        </a>
-
-    </div>
-
-  </div>
 
   <a class="carousel-control-prev" href="#jones" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

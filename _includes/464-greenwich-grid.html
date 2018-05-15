@@ -7,127 +7,16 @@
     </button>
 
     <div class="carousel-inner">
-
-    <div class="carousel-item active">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-1.jpg">
-            <img class="lazy d-block w-100" data-src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-1.jpg" alt="464 Greenwich" />
-        </a>
-
+    {% for gallery in site.data.464-greenwich %}
+    {% for image in gallery.images %}
+      <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
+          <a href="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" target="_blank" title="{{ gallery.description }}">
+              <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" alt="{{ gallery.description }}" />
+          </a>
+      </div>
+    {% endfor %}
+    {% endfor %}
     </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-2.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-2.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-3.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-3.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-4.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-4.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-5.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-5.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-6.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-6.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-7.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-7.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-8.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-8.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-9.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-9.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-10.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-10.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-11.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-11.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-12.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-12.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-13.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-13.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-14.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-14.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-15.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-15.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-16.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-16.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-17.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/464-greenwich-drexler/464-greenwich-17.jpg" alt="464 Greenwich" />
-        </a>
-
-    </div>
-
-  </div>
 
   <a class="carousel-control-prev" href="#464-greenwich" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

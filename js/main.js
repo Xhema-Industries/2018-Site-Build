@@ -22,6 +22,7 @@ $(function() {
     $('.carousel-press').carousel({
       interval: false
     });
+
     $(".carousel-home .carousel-item:nth-child(1)").addClass("active");
     $(".carousel-press .carousel-item:nth-child(1)").addClass("active");
 
