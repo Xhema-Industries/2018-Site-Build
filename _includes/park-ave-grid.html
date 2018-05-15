@@ -7,106 +7,16 @@
     </button>
 
     <div class="carousel-inner">
-
-    <div class="carousel-item active">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-1.jpg">
-            <img class="lazy d-block w-100" data-src="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-1.jpg" alt="Park Avenue" />
-        </a>
-
+    {% for gallery in site.data.park-ave %}
+    {% for image in gallery.images %}
+      <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
+          <a href="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" target="_blank" title="{{ gallery.description }}">
+              <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" alt="{{ gallery.description }}" />
+          </a>
+      </div>
+    {% endfor %}
+    {% endfor %}
     </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-2.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-2.jpg" alt="Park Avenue" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-3.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-3.jpg" alt="Park Avenue" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-4.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-4.jpg" alt="Park Avenue" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-5.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-5.jpg" alt="Park Avenue" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-6.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-6.jpg" alt="Park Avenue" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-7.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-7.jpg" alt="Park Avenue" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-8.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-8.jpg" alt="Park Avenue" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-9.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-9.jpg" alt="Park Avenue" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-10.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-10.jpg" alt="Park Avenue" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-11.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-11.jpg" alt="Park Avenue" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-12.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-12.jpg" alt="Park Avenue" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-13.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-13.jpg" alt="Park Avenue" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-14.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/park-ave-co-op/park-ave-14.jpg" alt="Park Avenue" />
-        </a>
-
-    </div>
-
-  </div>
 
   <a class="carousel-control-prev" href="#park-ave" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

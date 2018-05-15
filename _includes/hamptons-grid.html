@@ -7,59 +7,15 @@
     </button>
 
     <div class="carousel-inner">
-      <div class="carousel-item active">
-          <a href="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-001.jpg" target="_blank">
-              <img class="lazy d-block w-100" data-src="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-001.jpg" alt="Camuto Hamptons" />
-          </a>
-      </div>
-
-      <div class="carousel-item">
-          <a href="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-003.jpg" target="_blank">
-              <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-003.jpg" alt="Camuto Hamptons" />
-          </a>
-      </div>
-
-      <div class="carousel-item">
-          <a href="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-004.jpg" target="_blank">
-              <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-004.jpg" alt="Camuto Hamptons" />
-          </a>
-      </div>
-
-      <div class="carousel-item">
-          <a href="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-005.jpg" target="_blank">
-              <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-005.jpg" alt="Camuto Hamptons" />
-          </a>
-      </div>
-
-      <div class="carousel-item">
-          <a href="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-006.jpg" target="_blank">
-              <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-006.jpg" alt="Camuto Hamptons" />
-          </a>
-      </div>
-
-      <div class="carousel-item">
-          <a href="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-007.jpg" target="_blank">
-              <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-007.jpg" alt="Camuto Hamptons" />
-          </a>
-      </div>
-
-      <div class="carousel-item">
-          <a href="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-008.jpg" target="_blank">
-              <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-008.jpg" alt="Camuto Hamptons" />
-          </a>
-      </div>
-
-      <div class="carousel-item">
-          <a href="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-009.jpg" target="_blank">
-              <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-009.jpg" alt="Camuto Hamptons" />
-          </a>
-      </div>
-
-      <div class="carousel-item">
-          <a href="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-010.jpg" target="_blank">
-              <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/camuto-hamptons/camuto-hamptons-010.jpg" alt="Camuto Hamptons" />
-          </a>
-      </div>
+    {% for gallery in site.data.camuto-hamptons %}
+      {% for image in gallery.images %}
+        <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
+            <a href="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" target="_blank" title="{{ gallery.description }}">
+                <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" alt="{{ gallery.description }}" />
+            </a>
+        </div>
+      {% endfor %}
+    {% endfor %}
     </div>
 
     <a class="carousel-control-prev" href="#hamptons" role="button" data-slide="prev">

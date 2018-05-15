@@ -7,85 +7,16 @@
     </button>
 
     <div class="carousel-inner">
-
-    <div class="carousel-item active">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-2.jpg">
-            <img class="lazy d-block w-100" data-src="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-2.jpg" alt="Georgian Estate" />
-        </a>
-
+    {% for gallery in site.data.georgian-estate %}
+      {% for image in gallery.images %}
+        <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
+            <a href="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" target="_blank" title="{{ gallery.description }}">
+                <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" alt="{{ gallery.description }}" />
+            </a>
+        </div>
+      {% endfor %}
+    {% endfor %}
     </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-1.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-1.jpg" alt="Georgian Estate" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-3.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-3.jpg" alt="Georgian Estate" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-4.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-4.jpg" alt="Georgian Estate" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-5.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-5.jpg" alt="Georgian Estate" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-6.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-6.jpg" alt="Georgian Estate" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-7.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-7.jpg" alt="Georgian Estate" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-8.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-8.jpg" alt="Georgian Estate" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-9.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-9.jpg" alt="Georgian Estate" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-10.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-10.jpg" alt="Georgian Estate" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-11.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/georgian-estate/georgian-estate-11.jpg" alt="Georgian Estate" />
-        </a>
-
-    </div>
-
-  </div>
 
   <a class="carousel-control-prev" href="#georgian-estate" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

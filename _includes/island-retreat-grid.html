@@ -7,62 +7,16 @@
     </button>
 
     <div class="carousel-inner">
-
-    <div class="carousel-item active">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/island-retreat/001.JPG">
-            <img class="lazy d-block w-100" data-src="{{ site.baseurl }}/images/posts/country/island-retreat/001.JPG" alt="Island Retreat" />
-        </a>
+    {% for gallery in site.data.island-retreat %}
+      {% for image in gallery.images %}
+        <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
+            <a href="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" target="_blank" title="{{ gallery.description }}">
+                <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" alt="{{ gallery.description }}" />
+            </a>
+        </div>
+      {% endfor %}
+    {% endfor %}
     </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/island-retreat/002.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/island-retreat/002.jpg" alt="Island Retreat" />
-        </a>
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/island-retreat/003.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/island-retreat/003.jpg" alt="Island Retreat" />
-        </a>
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/island-retreat/004.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/island-retreat/004.jpg" alt="Island Retreat" />
-        </a>
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/island-retreat/005.JPG">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/island-retreat/005.JPG" alt="Island Retreat" />
-        </a>
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/island-retreat/006.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/island-retreat/006.jpg" alt="Island Retreat" />
-        </a>
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/island-retreat/007.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/island-retreat/007.jpg" alt="Island Retreat" />
-        </a>
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/island-retreat/008.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/island-retreat/008.jpg" alt="Island Retreat" />
-        </a>
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/island-retreat/009.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/island-retreat/009.jpg" alt="Island Retreat" />
-        </a>
-    </div>
-
-  </div>
 
   <a class="carousel-control-prev" href="#island-retreat" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

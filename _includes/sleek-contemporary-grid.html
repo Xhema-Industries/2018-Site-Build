@@ -7,134 +7,16 @@
     </button>
 
     <div class="carousel-inner">
-
-    <div class="carousel-item active">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_1.jpg">
-            <img class="lazy d-block w-100" data-src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_1.jpg" alt="Sleek Contemporary" />
-        </a>
-
+    {% for gallery in site.data.sleek-contemporary %}
+    {% for image in gallery.images %}
+      <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
+          <a href="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" target="_blank" title="{{ gallery.description }}">
+              <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" alt="{{ gallery.description }}" />
+          </a>
+      </div>
+    {% endfor %}
+    {% endfor %}
     </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_2.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_2.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_3.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_3.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_4.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_4.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_5.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_5.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_6.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_6.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_7.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_7.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_11.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_11.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_12.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_12.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_13.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_13.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_14.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_14.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_15.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_15.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_16.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_16.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_17.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_17.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_18.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_18.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_19.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_19.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_20.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_20.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_21.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/sleek-contemporary/Bcn_21.jpg" alt="Sleek Contemporary" />
-        </a>
-
-    </div>
-
-  </div>
 
   <a class="carousel-control-prev" href="#sleek-contemporary" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

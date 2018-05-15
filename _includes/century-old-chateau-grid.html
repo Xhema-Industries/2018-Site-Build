@@ -7,32 +7,16 @@
     </button>
 
     <div class="carousel-inner">
-
-    <div class="carousel-item active">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/century-old-chateau/001.jpg">
-            <img class="lazy d-block w-100" data-src="{{ site.baseurl }}/images/posts/country/century-old-chateau/001.jpg" alt="Century Old Chateau" />
-        </a>
+    {% for gallery in site.data.century-old-chateau %}
+      {% for image in gallery.images %}
+        <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
+            <a href="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" target="_blank" title="{{ gallery.description }}">
+                <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" alt="{{ gallery.description }}" />
+            </a>
+        </div>
+      {% endfor %}
+    {% endfor %}
     </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/century-old-chateau/002.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/century-old-chateau/002.jpg" alt="Century Old Chateau" />
-        </a>
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/century-old-chateau/003.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/century-old-chateau/003.jpg" alt="Century Old Chateau" />
-        </a>
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/country/century-old-chateau/004.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/country/century-old-chateau/004.jpg" alt="Century Old Chateau" />
-        </a>
-    </div>
-
-  </div>
 
   <a class="carousel-control-prev" href="#century-old-chateau" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

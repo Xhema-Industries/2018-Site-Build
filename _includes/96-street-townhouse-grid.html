@@ -7,120 +7,16 @@
     </button>
 
     <div class="carousel-inner">
-
-    <div class="carousel-item active">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-001.jpg">
-            <img class="lazy d-block w-100" data-src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-001.jpg" alt="96th Street" />
-        </a>
-
+    {% for gallery in site.data.96th-street-townhouse %}
+    {% for image in gallery.images %}
+      <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
+          <a href="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" target="_blank" title="{{ gallery.description }}">
+              <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" alt="{{ gallery.description }}" />
+          </a>
+      </div>
+    {% endfor %}
+    {% endfor %}
     </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-002.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-002.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-003.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-003.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-004.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-004.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-005.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-005.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-006.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-006.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-007.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-007.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-008.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-008.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-009.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-009.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-010.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-010.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-011.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-011.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-012.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-012.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-013.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-013.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-014.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-014.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-015.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-015.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-    <div class="carousel-item">
-        <a target="_blank" href="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-016.jpg">
-            <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/city/96th-street-townhouse/96th-016.jpg" alt="96th Street" />
-        </a>
-
-    </div>
-
-  </div>
 
   <a class="carousel-control-prev" href="#ninty-six-street" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

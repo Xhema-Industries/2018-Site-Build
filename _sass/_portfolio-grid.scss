@@ -259,19 +259,40 @@
   button.close {
     left: 0em;
     top: -0.2em;
-    font-size: 1.8em;
+    opacity: 0.4;
+    color: $color-white;
+    font-size: .90em;
     text-shadow: none;
+    font-family: $font--family--serif;
+    text-transform: uppercase;
+    &:hover {
+      @include transition(all, .3s);
+      opacity: 0.8;
+      color: $color-white;
+    }
   }
   .carousel-control-next {
     right: -15%;
-    opacity: .3;
+    opacity: 0.4;
+    color: $color-white;
+    &:hover {
+      @include transition(all, .3s);
+      opacity: 0.8;
+      color: $color-white;
+    }
     @include mobile {
       display: none;
     }
   }
   .carousel-control-prev {
     left: -15%;
-    opacity: .3;
+    opacity: 0.4;
+    color: $color-white;
+    &:hover {
+      @include transition(all, .3s);
+      opacity: 0.8;
+      color: $color-white;
+    }
     @include mobile {
       display: none;
     }
