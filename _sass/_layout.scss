@@ -251,6 +251,21 @@ section {
   }
 }
 
+#blog {
+  height: 60vh;
+
+  .banner-text {
+    margin: 2em auto;
+    padding: 2em 0;
+    position: relative;
+    color: $color-white !important;
+    opacity: 0.8;
+    -webkit-animation: none !important;
+    animation: none !important;
+  }
+
+}
+
 #xhema {
   .container {
     position: relative;

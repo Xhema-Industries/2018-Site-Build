@@ -24,8 +24,13 @@
     <div class="row col-full col-md-12">
       <div class="landing-inputs">
         <button id="landing-submit-button" class="btn btn-primary landing-page-button" type="submit">Submit</button>
+
+        <input type="hidden" name="_next" value="{{ site.baseurl }}/thanks" />
+
       </div>
     </div>
+
+    <input type="text" name="_gotcha" style="display:none" />
 
   </div>
 </form>
