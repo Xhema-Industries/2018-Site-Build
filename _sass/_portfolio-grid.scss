@@ -242,14 +242,17 @@
           margin: 0 auto;
 
           img {
-            width: auto !important;
-            height: 100% !important;
-            max-width: 100%;
+            max-width: 100% !important;
             text-align: center;
             margin: 0 auto;
+            max-height: 100% !important;
+            width: auto !important;
+            height: auto;
+
             @include mobile {
               width: 100% !important;
               height: auto !important;
+              
             }
           }
         }
