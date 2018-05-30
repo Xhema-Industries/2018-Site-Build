@@ -7,17 +7,20 @@ https://xhema-industries.github.io/2018-Site-Build/
 
 ## Getting started
 
- 1. Install Ruby v2 *(if not already installed)*
- 2. Clone repository from GitHub
- 3. `cd` into repository
- 4. `gem install bundler`
- 5. `bundle install`
- 6. To run: `bundle exec jekyll serve` with optional `--incremental` flag
+https://jekyllrb.com/docs/home/
+
+ 1. Install Jekyll and Ruby - https://jekyllrb.com/docs/installation/
+ 2. Clone repository from GitHub - https://github.com/Xhema-Industries/2018-Site-Build
+ 3. Download to desktop repository or download [GitHub Desktop](https://desktop.github.com/)
+ 4. `cd` into repository using `Terminal`
+ 5. then `gem install bundler`
+ 6. then `bundle install`
+ 7. To run: `bundle exec jekyll serve`
 
 ## Site Build will reside at:
 http://localhost:4000
 
-# Site Admin:
+## Site Admin:
 http://localhost:4000/admin
 
 
