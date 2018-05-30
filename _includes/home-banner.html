@@ -3,7 +3,7 @@
       {% assign slides = (site.posts | sort: 'order') %}
       {% for post in slides %}
         {% if post.tag contains 'hero' %}
-          <div id="xhema" class="carousel-item container-fluid" {% if post.image %} style="background: url({{ site.baseurl }}/images/posts/{{ post.image }});" {% endif %}>
+          <div id="xhema" class="carousel-item container-fluid" {% if post.image %} style="background: url({{ site.baseurl }}images/posts/{{ post.image }});" {% endif %}>
             <div id="banner-color-overlay"></div>
             <!-- <div class="loader"></div> -->
             <div class="row align-items-center position-absolute">
