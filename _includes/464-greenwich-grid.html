@@ -10,9 +10,12 @@
     {% for gallery in site.data.464-greenwich %}
     {% for image in gallery.images %}
       <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
-          <a href="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" target="_blank" title="{{ gallery.description }}">
-              <img class="d-block w-100" src="{{ site.baseurl }}/images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" alt="{{ gallery.description }}" />
+          <a href="{{ site.baseurl }}images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" target="_blank" title="{{ gallery.description }}">
+              <img class="d-block w-100" src="{{ site.baseurl }}images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" alt="{{ gallery.description }}" />
           </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h2>{{ gallery.description }}</h2>
+          </div>
       </div>
     {% endfor %}
     {% endfor %}

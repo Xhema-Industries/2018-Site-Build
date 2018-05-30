@@ -15,6 +15,7 @@
 	ul {
 		float: right;
 		width: auto;
+		margin: 0 auto;
 
 		@include mobile {
 			float: none;
@@ -75,6 +76,12 @@
     }
 }
 
+.carousel-caption {
+    background: rgba(0,0,0,0.6);
+		bottom: 0;
+    width: 100%;
+    left: 0;
+}
 
  // Custom styles for this pen
 html,

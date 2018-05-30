@@ -1,13 +1,13 @@
-<div id="30-john-street-open" class="my-gallery" tabindex="-1" role="dialog" aria-hidden="true">
+<div id="greenwich-waterfront-open" class="my-gallery" tabindex="-1" role="dialog" aria-hidden="true">
 
-  <div id="30-john-street" class="carousel carousel-port slide" data-ride="carousel">
+  <div id="greenwich-waterfront" class="carousel carousel-port slide" data-ride="carousel">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
       <i class="fas fa-times"></i>
       Close
     </button>
 
     <div class="carousel-inner">
-    {% for gallery in site.data.30-john-street %}
+    {% for gallery in site.data.greenwich-waterfront %}
       {% for image in gallery.images %}
         <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
             <a href="{{ site.baseurl }}images/posts/{{ gallery.imagefolder }}/{{ gallery.id }}/{{ image.name }}" target="_blank" title="{{ gallery.description }}">
@@ -21,11 +21,11 @@
     {% endfor %}
     </div>
 
-  <a class="carousel-control-prev" href="#30-john-street" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#greenwich-waterfront" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#30-john-street" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#greenwich-waterfront" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>

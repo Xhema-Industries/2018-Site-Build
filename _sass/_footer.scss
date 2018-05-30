@@ -59,9 +59,9 @@ footer {
 
   address {
     float: left;
-    width: 29%;
-    margin: 0 1em 2em;
-    text-align: left;
+    width: 33.33%;
+    margin: 0 0 2em;
+    text-align: center;
     @include mobile {
       float: none;
       width: 50%;

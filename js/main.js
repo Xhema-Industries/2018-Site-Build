@@ -90,7 +90,7 @@ $(function() {
          }
      });
      // Close City Portfolio Section and scroll up
-     $('#city-port .close').on('click', function() {
+     $('#city-port .landing-page-button').on('click', function() {
         $(cityport).slideUp();
         var target = portfolio;
          if( target.length ) {
@@ -101,7 +101,7 @@ $(function() {
          }
      });
      // Close Country Portfolio Section and scroll up
-     $('#country-port .close').on('click', function() {
+     $('#country-port .landing-page-button').on('click', function() {
         $(countryport).slideUp();
         var target = portfolio;
          if( target.length ) {
@@ -111,13 +111,13 @@ $(function() {
              }, 1000);
          }
      });
-     // Close Modal
-     $('.my-gallery button.close').on('click', function() {
+
+     $('.my-gallery .close').on('click', function() {
         var target = portfolio;
          if( target.length ) {
              event.preventDefault();
              $('html, body').stop().animate({
-                 scrollTop: target.offset().top + 100
+                 scrollTop: target.offset().top - 100
              }, 1000);
          }
      });
@@ -133,8 +133,8 @@ $(function() {
      var showDiv4 = $('#ArchitectDigestCentralParkThumb').attr('data');
      var showDiv5 = $('#RobReportGramercyParkThumb').attr('data');
      var showDiv6 = $('#WMagazineApartmentThumb').attr('data');
-     // Show First
-     $('#ArchitectDigestGeorgian').show();
+     var showDiv7 = $('#WMagazine2009Thumb').attr('data');
+
      // Thumbnail OnClick Function
      $('#ArchitectDigestGeorgianThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -144,6 +144,7 @@ $(function() {
         $(showDiv4).hide();
         $(showDiv5).hide();
         $(showDiv6).hide();
+        $(showDiv7).hide();
      });
      $('#NYSpacesThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -153,6 +154,7 @@ $(function() {
         $(showDiv4).hide();
         $(showDiv5).hide();
         $(showDiv6).hide();
+        $(showDiv7).hide();
      });
      $('#RobReportjimXhemaThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -162,6 +164,7 @@ $(function() {
         $(showDiv4).hide();
         $(showDiv5).hide();
         $(showDiv6).hide();
+        $(showDiv7).hide();
      });
      $('#ArchitectDigestCentralParkThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -171,6 +174,7 @@ $(function() {
         $(showDiv3).hide();
         $(showDiv5).hide();
         $(showDiv6).hide();
+        $(showDiv7).hide();
      });
      $('#RobReportGramercyParkThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -180,6 +184,7 @@ $(function() {
         $(showDiv3).hide();
         $(showDiv4).hide();
         $(showDiv6).hide();
+        $(showDiv7).hide();
      });
      $('#WMagazineApartmentThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -189,6 +194,17 @@ $(function() {
         $(showDiv3).hide();
         $(showDiv4).hide();
         $(showDiv5).hide();
+        $(showDiv7).hide();
+     });
+     $('#WMagazine2009Thumb').on('click', function() {
+       // Create Show Var from Data Attribute
+        $(showDiv7).show();
+        $(showDiv1).hide();
+        $(showDiv2).hide();
+        $(showDiv3).hide();
+        $(showDiv4).hide();
+        $(showDiv5).hide();
+        $(showDiv6).hide();
      });
 
 });

@@ -1,5 +1,5 @@
 - id: gramercy
-  description: Gallery Images for Gramercy
+  description: Gramercy
   imagefolder: city
   images:
   - name: Gramercy-001.jpg
