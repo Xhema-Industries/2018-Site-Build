@@ -11,7 +11,7 @@ title: Xhema Industries
 # Change email to '$xhema_email' when ready to go live
 email: info@xhema.com
 description: Building Beyond Comprimise
-baseurl: "/2018-Site-Build/" # /2018-Site-Build/ the subpath of your site, e.g. /blog
+baseurl: "/" # /2018-Site-Build/ the subpath of your site, e.g. /blog
 url: "/" # the base hostname & protocol for your site, e.g. http://example.com
 logo:
 github_username:  xhema-indsutries
