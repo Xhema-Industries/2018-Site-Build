@@ -134,8 +134,17 @@ $(function() {
      var showDiv5 = $('#RobReportGramercyParkThumb').attr('data');
      var showDiv6 = $('#WMagazineApartmentThumb').attr('data');
      var showDiv7 = $('#WMagazine2009Thumb').attr('data');
+     var showDiv8 = $('#ArchitectDigest2017Thumb').attr('data');
 
-     // Thumbnail OnClick Function
+     $(showDiv1).hide();
+     $(showDiv2).hide();
+     $(showDiv3).hide();
+     $(showDiv4).hide();
+     $(showDiv5).hide();
+     $(showDiv6).hide();
+     $(showDiv7).hide();
+     $(showDiv8).show();
+     // Thumbnail OnClicks Function
      $('#ArchitectDigestGeorgianThumb').on('click', function() {
        // Create Show Var from Data Attribute
         $(showDiv1).show();
@@ -145,6 +154,7 @@ $(function() {
         $(showDiv5).hide();
         $(showDiv6).hide();
         $(showDiv7).hide();
+        $(showDiv8).hide();
      });
      $('#NYSpacesThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -155,6 +165,7 @@ $(function() {
         $(showDiv5).hide();
         $(showDiv6).hide();
         $(showDiv7).hide();
+        $(showDiv8).hide();
      });
      $('#RobReportjimXhemaThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -165,6 +176,7 @@ $(function() {
         $(showDiv5).hide();
         $(showDiv6).hide();
         $(showDiv7).hide();
+        $(showDiv8).hide();
      });
      $('#ArchitectDigestCentralParkThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -175,6 +187,7 @@ $(function() {
         $(showDiv5).hide();
         $(showDiv6).hide();
         $(showDiv7).hide();
+        $(showDiv8).hide();
      });
      $('#RobReportGramercyParkThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -185,6 +198,7 @@ $(function() {
         $(showDiv4).hide();
         $(showDiv6).hide();
         $(showDiv7).hide();
+        $(showDiv8).hide();
      });
      $('#WMagazineApartmentThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -195,10 +209,23 @@ $(function() {
         $(showDiv4).hide();
         $(showDiv5).hide();
         $(showDiv7).hide();
+        $(showDiv8).hide();
      });
      $('#WMagazine2009Thumb').on('click', function() {
        // Create Show Var from Data Attribute
         $(showDiv7).show();
+        $(showDiv1).hide();
+        $(showDiv2).hide();
+        $(showDiv3).hide();
+        $(showDiv4).hide();
+        $(showDiv5).hide();
+        $(showDiv6).hide();
+        $(showDiv8).hide();
+     });
+     $('#ArchitectDigest2017Thumb').on('click', function() {
+       // Create Show Var from Data Attribute
+        $(showDiv8).show();
+        $(showDiv7).hide();
         $(showDiv1).hide();
         $(showDiv2).hide();
         $(showDiv3).hide();
