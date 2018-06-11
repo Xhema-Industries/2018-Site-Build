@@ -8,110 +8,195 @@
 }
 
 
-.press-thumbs {
-	display: inline-block;
-	position: relative;
-	z-index: 999;
-	ul {
-		float: right;
-		width: auto;
-		margin: 0 auto;
+#carouselPressControls {
 
-		@include mobile {
-			float: none;
-			width: 100%;
-			padding: 0 0;
-			margin: 1em auto;
-		}
-
-		li {
-			display: inline-block;
-			width: 80px;
-			height: auto;
-			overflow: hidden;
-			margin: 0 .3em;
-
-			@include mobile {
-		    width: 90px;
-		    margin: 0 .33em;
-			}
-
-			a {
-				cursor: pointer;
-				display: inline-block;
-				&:hover {
-					@include transition(all, .3s);
-		      filter:brightness(140%);
-				}
-				img {
-					width: 100%;
-			    height: auto;
-			    max-width: 100%;
-				}
-			}
-		}
+	.carousel-inner {
+		padding: 1em 4em 0;
 	}
+
+	@media (min-width: 768px) {
+
+	    /* show 3 items */
+	    .carousel-inner .active,
+	    .carousel-inner .active + .carousel-item,
+	    .carousel-inner .active + .carousel-item + .carousel-item,
+	    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item,
+			.carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+			.carousel-inner .active + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+	        display: block;
+	    }
+
+	    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+	    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+	    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+	    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item,
+			.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+			.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item  {
+	        transition: none;
+	    }
+
+	    .carousel-inner .carousel-item-next,
+	    .carousel-inner .carousel-item-prev {
+	      position: relative;
+	      transform: translate3d(0, 0, 0);
+	    }
+
+	    .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+	        position: absolute;
+	        top: 0;
+	        right: -25%;
+	        z-index: -1;
+	        display: block;
+	        visibility: visible;
+	    }
+
+	    /* left or forward direction */
+	    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+	    .carousel-item-next.carousel-item-left + .carousel-item,
+	    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+	    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+	    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+			.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+			.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+	        position: relative;
+	        transform: translate3d(-100%, 0, 0);
+	        visibility: visible;
+	    }
+
+	    /* farthest right hidden item must be abso position for animations */
+	    .carousel-inner .carousel-item-prev.carousel-item-right {
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        z-index: -1;
+	        display: block;
+	        visibility: visible;
+	    }
+
+	    /* right or prev direction */
+	    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+	    .carousel-item-prev.carousel-item-right + .carousel-item,
+	    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+	    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+	    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+			.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item,
+			.carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+	        position: relative;
+	        transform: translate3d(100%, 0, 0);
+	        visibility: visible;
+	        display: block;
+	        visibility: visible;
+	    }
+
+	}
+
 }
+
+// .press-thumbs {
+// 	// display: inline-block;
+// 	// position: relative;
+// 	// z-index: 999;
+// 	ul {
+// 		// float: right;
+// 		// overflow: hidden;
+// 		// width: auto;
+// 		// margin: 0 auto;
+//
+// 		// @include mobile {
+// 		// 	float: none;
+// 		// 	width: 100%;
+// 		// 	padding: 0 0;
+// 		// 	margin: 1em auto;
+// 		// }
+//
+// 		li {
+// 			display: inline-block;
+// 			width: 80px;
+// 			height: auto;
+// 			// overflow: hidden;
+// 			// margin: 0 .3em;
+//
+// 			// @include mobile {
+// 		  //   width: 90px;
+// 		  //   margin: 0 .33em;
+// 			// }
+//
+// 			a {
+// 				cursor: pointer;
+// 				display: inline-block;
+// 				&:hover {
+// 					@include transition(all, .3s);
+// 		      filter:brightness(140%);
+// 				}
+// 				img {
+// 					width: 100%;
+// 			    height: auto;
+// 			    max-width: 100%;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 // Carousel fade transition
-.carousel-fade {
-	.carousel-item {
-		display: block;
-		position: absolute;
-		opacity: 0;
-		transition: opacity 1.5s ease-in-out;
-
-		&.active {
-			opacity: 1;
-		}
-	}
-}
-
-.carousel-control-next,
-.carousel-control-prev {
-		opacity: 0.7;
-    &:hover {
-      @include transition(all, .3s);
-			opacity: 1;
-			color: $color-white;
-    }
-}
-
-.carousel-caption {
-    background: rgba(0,0,0,0.6);
-		bottom: 0;
-    width: 100%;
-    left: 0;
-}
-
- // Custom styles for this pen
-html,
-body,
-.carousel,
-.carousel-inner,
-.carousel-item {
-  width: 100%;
-  height: 100%;
-	@include mobile {
-    height: 100%;
-		margin: 0 0 .8em 0;
-  }
-
-	img.img-fluid {
-		width: 100%;
-	}
-}
-
-// Loader
-.loader {
-    border: 16px solid rgba($grey-light, 0.5); /* Light grey */
-    border-top: 16px solid rgba(0,0,0,0.8); /* Blue */
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+// .carousel-fade {
+// 	.carousel-item {
+// 		display: block;
+// 		position: absolute;
+// 		opacity: 0;
+// 		transition: opacity 1.5s ease-in-out;
+//
+// 		&.active {
+// 			opacity: 1;
+// 		}
+// 	}
+// }
+//
+// .carousel-control-next,
+// .carousel-control-prev {
+// 		opacity: 0.7;
+//     &:hover {
+//       @include transition(all, .3s);
+// 			opacity: 1;
+// 			color: $color-white;
+//     }
+// }
+//
+// .carousel-caption {
+//     background: rgba(0,0,0,0.6);
+// 		bottom: 0;
+//     width: 100%;
+//     left: 0;
+// }
+//
+//  // Custom styles for this pen
+// html,
+// body,
+// .carousel,
+// .carousel-inner,
+// .carousel-item {
+//   width: 100%;
+//   height: 100%;
+// 	@include mobile {
+//     height: 100%;
+// 		margin: 0 0 .8em 0;
+//   }
+//
+// 	img.img-fluid {
+// 		width: 100%;
+// 	}
+// }
+//
+// // Loader
+// .loader {
+//     border: 16px solid rgba($grey-light, 0.5); /* Light grey */
+//     border-top: 16px solid rgba(0,0,0,0.8); /* Blue */
+//     border-radius: 50%;
+//     width: 60px;
+//     height: 60px;
+//     animation: spin 2s linear infinite;
+// }
+//
+// @keyframes spin {
+//     0% { transform: rotate(0deg); }
+//     100% { transform: rotate(360deg); }
+// }
