@@ -1,0 +1,53 @@
+<div id="{{ include.name }}-open" class="my-gallery" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div id="{{ include.name }}" class="carousel carousel-port slide" data-ride="carousel">
+
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+    <i class="fas fa-times"></i>
+    Close
+  </button>
+
+  <div class="carousel-inner" role="listbox">
+    {% for picture in include.data %}
+    {% for image in picture.images %}
+      {% if forloop.first == true %}
+        <div class="item active">
+          {% if picture.title %}
+            <img src="{{ site.baseurl }}images/posts/{{ picture.imagefolder }}/{{ picture.id }}/{{ image.name }}" alt="{{ picture.title }}">
+          {% else %}
+            <img src="{{ site.baseurl }}images/posts/{{ picture.imagefolder }}/{{ picture.id }}/{{ image.name }}">
+          {% endif %}
+          {% if picture.caption %}
+            <div class="carousel-caption">
+              {{ picture.caption }}
+            </div>
+          {% endif %}
+        </div>
+      {% else %}
+        <div class="item">
+          {% if picture.title %}
+            <img src="{{ site.baseurl }}images/posts/{{ picture.imagefolder }}/{{ picture.id }}/{{ image.name }}" alt="{{ picture.title }}">
+          {% else %}
+            <img src="{{ site.baseurl }}images/posts/{{ picture.imagefolder }}/{{ picture.id }}/{{ image.name }}">
+          {% endif %}
+          {% if picture.caption %}
+            <div class="carousel-caption">
+              {{ picture.caption }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+    {% endfor %}
+ </div>
+
+   <a class="left carousel-control" href="#{{ include.name }}" role="button" data-slide="prev">
+     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+     <span class="sr-only">Previous</span>
+   </a>
+   <a class="right carousel-control" href="#{{ include.name }}" role="button" data-slide="next">
+     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+     <span class="sr-only">Next</span>
+   </a>
+
+ </div>
