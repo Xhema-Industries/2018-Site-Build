@@ -170,7 +170,7 @@
 
         h3 {
           position: absolute;
-          top: 40%;
+          top: 22%;
           color: #FFF !important;
           font-weight: 600 !important;
           text-transform: uppercase;
@@ -180,7 +180,7 @@
         }
         p {
           position: absolute;
-          top: 58%;
+          top: 28%;
           z-index: 999;
           color: #FFF !important;
           margin: 0 auto;
@@ -189,6 +189,22 @@
           font-size: 1em;
           @include mobile {
             padding: 0 1em;
+          }
+          span {
+            font-size: .8em;
+            display: block;
+            width: 100%;
+            padding: 1em 0;
+            .fa-caret-right {
+              font-size: 1.5em;
+              vertical-align: middle;
+              padding-bottom: 3px;
+              margin: 0 3px;
+              color: $color-orange;
+            }
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
 

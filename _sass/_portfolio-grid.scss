@@ -203,7 +203,7 @@
 .my-gallery {
   display: none;
   z-index: 9999;
-  position: relative;
+  position: absolute;
   width: 100%;
 
   @include mobile {
@@ -212,18 +212,19 @@
   }
 
   .carousel {
-    width: 50%;
-    height: 700px;
+    width: 80%;
+    height: 550px;
     position: relative;
     margin: 10% auto;
 
     @include mobile {
-      width: 90%;
+      width: 80%;
       margin: 0 auto;
       overflow: auto;
     }
 
     .carousel-inner {
+        height: 550px;
 
       @include mobile {
         height: auto;
@@ -237,16 +238,17 @@
         }
 
         a {
+          display: block;
+          margin: 0 auto;
+          text-align: center;
 
           img {
-            max-width: 100% !important;
-            text-align: center;
-            margin: 0 auto;
-            max-height: 800px !important;
+
+            height: auto;
+            max-height: 550px;
             width: auto !important;
-            height: 100%;
-            vertical-align: middle;
-            padding: 3em 0;
+            margin: 0 auto;
+            text-align: center;
 
             @include mobile {
               width: 100% !important;
@@ -259,8 +261,8 @@
     }
   }
   button.close {
-    left: 0em;
-    top: -2em;
+    left: 5em;
+    top: -1em;
     opacity: 0.4;
     color: $color-white;
     font-size: 1em;
