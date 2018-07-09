@@ -1,7 +1,7 @@
 // Contact BS modal changes
 // main modals
 .modal-backdrop.show {
-  opacity: 1.0 !important;
+  opacity: 0.7 !important;
 }
 
 .modal {
@@ -17,7 +17,7 @@
 
 .grid-modal {
   .modal-body {
-    background: #FFF;
+    background: none;
   }
 }
 
@@ -31,7 +31,7 @@
   margin: 0;
   top: 0;
   left: 0;
-  background: #FFF;
+  background: none;
   .modal-content {
     height: 100%;
     border-radius: 0;
