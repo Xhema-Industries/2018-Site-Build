@@ -2,7 +2,9 @@
 layout: post
 title:  "W Magazine"
 subtitle: "Decorators Apartment"
-categories: w-magazine-2009-slide
+categories:
+  - w-magazine-2009-slide
+  - w-magazine-slide
 tag: press
 order: 3
 ---
