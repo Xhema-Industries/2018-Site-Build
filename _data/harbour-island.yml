@@ -1,0 +1,8 @@
+- id: harbour-island
+  description: Harbour Island
+  imagefolder: country
+  images:
+  - name: harbour-island-001.jpg
+  - name: harbour-island-002.jpg
+  - name: harbour-island-003.jpg
+  - name: harbour-island-004.jpg
