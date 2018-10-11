@@ -91,7 +91,7 @@
        }
        img {
          position: relative;
-         top: -80px;
+         top: auto;
          @include mobile {
            top:0px;
          }
