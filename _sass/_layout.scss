@@ -20,6 +20,12 @@ body {
     font-weight: 300;
   }
 
+  blockquote {
+      margin: 0;
+      color: #f8961d;
+      font-weight: 900 !important;
+  }
+
   ul, ul li { list-style: none !important; }
 
   h2 {
