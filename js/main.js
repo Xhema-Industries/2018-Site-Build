@@ -157,6 +157,7 @@ $(function() {
      var showDiv6 = $('#WMagazineApartmentThumb').attr('data');
      var showDiv7 = $('#WMagazine2009Thumb').attr('data');
      var showDiv8 = $('#ArchitectDigest2017Thumb').attr('data');
+     var showDiv9 = $('#ArchitectDigest2018Thumb').attr('data');
 
      $(showDiv1).hide();
      $(showDiv2).hide();
@@ -165,7 +166,8 @@ $(function() {
      $(showDiv5).hide();
      $(showDiv6).hide();
      $(showDiv7).hide();
-     $(showDiv8).show();
+     $(showDiv8).hide();
+     $(showDiv9).show();
      // Thumbnail OnClicks Function
      $('#ArchitectDigestGeorgianThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -177,6 +179,7 @@ $(function() {
         $(showDiv6).hide();
         $(showDiv7).hide();
         $(showDiv8).hide();
+        $(showDiv9).hide();
      });
      $('#NYSpacesThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -188,6 +191,7 @@ $(function() {
         $(showDiv6).hide();
         $(showDiv7).hide();
         $(showDiv8).hide();
+        $(showDiv9).hide();
      });
      $('#RobReportjimXhemaThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -199,6 +203,7 @@ $(function() {
         $(showDiv6).hide();
         $(showDiv7).hide();
         $(showDiv8).hide();
+        $(showDiv9).hide();
      });
      $('#ArchitectDigestCentralParkThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -210,6 +215,7 @@ $(function() {
         $(showDiv6).hide();
         $(showDiv7).hide();
         $(showDiv8).hide();
+        $(showDiv9).hide();
      });
      $('#RobReportGramercyParkThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -221,6 +227,7 @@ $(function() {
         $(showDiv6).hide();
         $(showDiv7).hide();
         $(showDiv8).hide();
+        $(showDiv9).hide();
      });
      $('#WMagazineApartmentThumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -232,6 +239,7 @@ $(function() {
         $(showDiv5).hide();
         $(showDiv7).hide();
         $(showDiv8).hide();
+        $(showDiv9).hide();
      });
      $('#WMagazine2009Thumb').on('click', function() {
        // Create Show Var from Data Attribute
@@ -243,10 +251,24 @@ $(function() {
         $(showDiv5).hide();
         $(showDiv6).hide();
         $(showDiv8).hide();
+        $(showDiv9).hide();
      });
      $('#ArchitectDigest2017Thumb').on('click', function() {
        // Create Show Var from Data Attribute
         $(showDiv8).show();
+        $(showDiv7).hide();
+        $(showDiv1).hide();
+        $(showDiv2).hide();
+        $(showDiv3).hide();
+        $(showDiv4).hide();
+        $(showDiv5).hide();
+        $(showDiv6).hide();
+        $(showDiv9).hide();
+     });
+     $('#ArchitectDigest2018Thumb').on('click', function() {
+       // Create Show Var from Data Attribute
+        $(showDiv9).show();
+        $(showDiv8).hide();
         $(showDiv7).hide();
         $(showDiv1).hide();
         $(showDiv2).hide();

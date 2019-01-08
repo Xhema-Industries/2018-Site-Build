@@ -9,7 +9,10 @@
       <div id="carouselPressControls" class="carousel slide carousel-press-thumbs" data-ride="carousel" data-interval="false">
           <div class="carousel-inner row w-100 mx-auto" role="listbox">
 
-              <div class="carousel-item col-md-2 active">
+            <div class="carousel-item col-md-2 active">
+                <a id="ArchitectDigest2018Thumb" data="#ArchitectDigest2018"><img class="d-block w-100" src="{{ site.baseurl }}images/posts/press/architectual-digest-2018/architectual-digest-2018-cover.jpg" /></a>
+            </div>
+              <div class="carousel-item col-md-2">
                   <a id="ArchitectDigest2017Thumb" data="#ArchitectDigest2017"><img class="d-block w-100" src="{{ site.baseurl }}images/posts/press/architectual-digest-2017/architectual-digest-2017-cover.jpg" /></a>
               </div>
               <div class="carousel-item col-md-2">
@@ -43,6 +46,7 @@
       </div>
   </div>
 
+  {% include architectual-digest-2018-carousel.html %}
   {% include architectual-digest-georgian-country-home-carousel.html %}
   {% include ny-spaces-carousel.html %}
   {% include architectual-digest-2017-carousel.html %}
