@@ -2,9 +2,9 @@
   description: Park Ave
   imagefolder: city
   images:
+  - name: park-ave-3.jpg
   - name: park-ave-1.jpg
   - name: park-ave-2.jpg
-  - name: park-ave-3.jpg
   - name: park-ave-4.jpg
   - name: park-ave-5.jpg
   - name: park-ave-6.jpg
