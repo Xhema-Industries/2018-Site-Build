@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: 2018-Site-Build/tree/master/_data
+  path: tree/master/_data
   label: Photo Gallery Data
   create: documents
   match: "**/*"
